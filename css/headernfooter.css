@@ -1,1 +1,49 @@
-/*# sourceMappingURL=headernfooter.css.map */
+/*set navbars bottom border*/
+nav {
+  background-color: rgb(18, 18, 18);
+  /*set logos size*/
+  /*set dropdown button color*/
+  /*sets dropdown menu*/
+}
+nav #logo {
+  width: 70px;
+}
+nav .navbar-toggler {
+  /*.nav-toggler is button container*/
+  padding: 0.4rem; /*gives margin space to button icon*/
+  /*style hammburger icon*/
+}
+nav .navbar-toggler i {
+  width: 3vw;
+  height: auto;
+  color: white;
+}
+@media (min-width: 768px) {
+  nav #navbarSupportedContent {
+    text-align: right;
+  }
+}
+nav .navbar-nav {
+  background-color: rgb(18, 18, 18);
+  text-align: center;
+  border-top: solid rgb(229, 168, 229);
+  border-bottom: solid 1px rgb(229, 168, 229);
+  /*set dropwdown items*/
+}
+@media (min-width: 768px) {
+  nav .navbar-nav {
+    /*HOW TO PUT LINKS TO RIGTH MARGIN*/
+    text-align: right;
+    border-top: none;
+    border-bottom: none;
+  }
+}
+nav .navbar-nav .nav-item {
+  border-bottom: solid 1px white;
+  color: white;
+  /*set dropdown items text*/
+}
+nav .navbar-nav .nav-item .nav-link {
+  font-size: 1rem;
+  color: white;
+}/*# sourceMappingURL=headernfooter.css.map */

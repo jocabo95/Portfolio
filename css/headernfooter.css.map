@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"headernfooter.css"}
+{"version":3,"sourceRoot":"","sources":["headernfooter.scss"],"names":[],"mappings":"AAIA;AACA;EACI,kBANS;AAQT;AAKA;AAmBA;;AAvBA;EACA;;AAIA;AAEI;EACA;AAEA;;AACA;EACI;EACA;EACA,OArBM;;AAyBd;EACI;IACI;;;AAIR;EACI,kBAlCK;EAmCL;EACA;EACA;AASA;;AAPA;EANJ;AAOQ;IACA;IACA;IACA;;;AAIJ;EACI;EACA,OA/CM;AAiDN;;AACA;EACI;EACA,OApDE","file":"headernfooter.css"}

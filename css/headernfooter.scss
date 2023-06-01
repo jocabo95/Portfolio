@@ -1,0 +1,63 @@
+$background: rgb(18, 18, 18);
+$details: rgb(229, 168, 229);
+$background-text: white;
+
+/*set navbars bottom border*/
+nav{
+    background-color: $background;
+
+    /*set logos size*/
+    #logo{
+    width: 70px;
+    }
+
+    /*set dropdown button color*/
+    .navbar-toggler{
+
+        /*.nav-toggler is button container*/
+        padding: 0.4rem; /*gives margin space to button icon*/
+
+        /*style hammburger icon*/
+        i{
+            width: 3vw;
+            height: auto;
+            color: $background-text;
+        }
+
+    }
+    @media (min-width: 768px) {
+        #navbarSupportedContent{
+            text-align: right;
+        }
+    }
+    /*sets dropdown menu*/
+    .navbar-nav{
+        background-color: $background;
+        text-align: center;
+        border-top: solid $details;
+        border-bottom: solid 1px $details;
+
+        @media (min-width: 768px){
+            /*HOW TO PUT LINKS TO RIGTH MARGIN*/
+            text-align: right;
+            border-top: none;
+            border-bottom: none;
+        }
+
+        /*set dropwdown items*/
+        .nav-item{
+            border-bottom: solid 1px $background-text;
+            color: $background-text;
+
+            /*set dropdown items text*/
+            .nav-link{
+                font-size: 1rem;
+                color: $background-text;
+            }
+        }
+
+    }
+
+    
+
+}

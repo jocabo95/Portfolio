@@ -27,48 +27,45 @@
             
             <!--navbar is created with <nav class="navbar navbar-default">-->
             <!--navbar-default & navbar-inverse determine pre-established style-->
-            <nav class="navbar fixed-top navbar-inverse">
+            <!--d-print ensures navbar appear if website is printed-->
+            <!--navbar-expand-{-sm|-md|-lg|-xl} determines vw at which navbar dropdown deploys-->
+            <nav class="navbar navbar-expand-md fixed-top navbarScroll d-print">
 
-                <!--.container fluid to make navbar fill whole vp width -->
-                <div class="container-fluid">
+                <!--navbar-brand to fixate project name-->
+                <a class="navbar-brand" href="index.html">
+                    <img id="logo" src="images/logo.png" alt="home link">
+                </a>
 
-                    <!--navbar-brand to fixate project name-->
-                    <a class="navbar-brand" href="index.html">
-                        <img src="images/logo.png" alt="home link">
-                    </a>
+                <!--create collapsible button-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
 
-                    <!--create collapsible button-->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                <!--asign button content with .collapse .navbar-collapse-->
+                <!--id="navbarSupportedContent" generates dropdown animation-->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    
+                    <ul class="navbar-nav mr-auto">
 
-                    <!--asign button content with .collapse .navbar-collapse-->
-                    <!--id="navbarSupportedContent" generates dropdown animation-->
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        
-                        <ul class="navbar-nav mr-auto">
+                        <!--specify nav-item & nav-link-->
+                        <!--adding .actve to nav-item shows page is currently being visited-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Proyectos</a>
+                        </li>
 
-                            <!--specify nav-item & nav-link-->
-                            <!--adding .actve to nav-item shows page is currently being visited-->
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Proyectos</a>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre mi</a>
+                        </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Sobre mi</a>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Habilidades</a>
+                        </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Habilidades</a>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                        </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contacto</a>
-                            </li>
-
-                        </ul>
-
-                    </div>
+                    </ul>
 
                 </div>
 
