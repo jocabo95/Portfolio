@@ -1,8 +1,12 @@
+/*navbar-expand-{-sm|-md|-lg|-xl}*/
 /*NAVBAR - RESPONSIVE*/
 nav {
-  background-color: rgb(18, 18, 18);
+  /*if height changes, .navbar my-0 must change too*/
+  background-color: none;
   /*set logos size*/
   /*set dropdown button color*/
+  /*removes hamburguer button border when clicked*/
+  /*mquery to set navbar titles right margin only for PC*/
   /*sets dropdown menu*/
 }
 nav #logo {
@@ -11,6 +15,7 @@ nav #logo {
 nav .navbar-toggler {
   /*.nav-toggler is button container*/
   padding: 0.4rem; /*gives margin space to button icon*/
+  border: none;
   /*style hammburger icon*/
 }
 nav .navbar-toggler i {
@@ -18,13 +23,20 @@ nav .navbar-toggler i {
   height: auto;
   color: white;
 }
-@media (min-width: 768px) {
-  nav #navbarSupportedContent {
-    text-align: right;
+nav .navbar-toggler:focus, nav .navbar-toggler:active, nav .navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+@media (max-width: 768px) {
+  nav {
+    /*select only ul tag with class me-2*/
+  }
+  nav ul.me-2 {
+    margin-right: 0 !important;
   }
 }
 nav .navbar-nav {
-  background-color: rgb(18, 18, 18);
+  background-color: none;
   text-align: center;
   border-top: solid rgb(229, 168, 229);
   border-bottom: solid 1px rgb(229, 168, 229);
@@ -33,7 +45,6 @@ nav .navbar-nav {
 @media (min-width: 768px) {
   nav .navbar-nav {
     /*HOW TO PUT LINKS TO RIGTH MARGIN*/
-    text-align: right;
     border-top: none;
     border-bottom: none;
   }
@@ -41,9 +52,32 @@ nav .navbar-nav {
 nav .navbar-nav .nav-item {
   border-bottom: solid 1px white;
   color: white;
+  opacity: 1;
+  /*mquery to avoid bot border in navbar titles pc*/
   /*set dropdown items text*/
+}
+@media (min-width: 768px) {
+  nav .navbar-nav .nav-item {
+    border-bottom: none;
+  }
 }
 nav .navbar-nav .nav-item .nav-link {
   font-size: 1rem;
   color: white;
+}
+
+#navBar {
+  transition: all 0.5s;
+}
+
+.navScroll {
+  background-color: rgb(18, 18, 18);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+/*MAIN*/
+#landing {
+  width: 100%;
+  height: 1000px;
+  background-color: rgb(210, 210, 210);
 }/*# sourceMappingURL=headernfooter.css.map */

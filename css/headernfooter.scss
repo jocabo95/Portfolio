@@ -2,9 +2,16 @@ $background: rgb(18, 18, 18);
 $details: rgb(229, 168, 229);
 $background-text: white;
 
+/*navbar-expand-{-sm|-md|-lg|-xl}*/
+$toggle-change: 768px;
+
+
+
 /*NAVBAR - RESPONSIVE*/
 nav{
-    background-color: $background;
+    
+    /*if height changes, .navbar my-0 must change too*/
+    background-color: none;
 
     /*set logos size*/
     #logo{
@@ -16,6 +23,7 @@ nav{
 
         /*.nav-toggler is button container*/
         padding: 0.4rem; /*gives margin space to button icon*/
+        border: none;
 
         /*style hammburger icon*/
         i{
@@ -25,21 +33,31 @@ nav{
         }
 
     }
-    @media (min-width: 768px) {
-        #navbarSupportedContent{
-            text-align: right;
+
+    /*removes hamburguer button border when clicked*/
+    .navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    }
+    
+    /*mquery to set navbar titles right margin only for PC*/
+    @media (max-width: $toggle-change){
+
+        /*select only ul tag with class me-2*/
+        ul.me-2{
+            margin-right: 0 !important;
         }
     }
+
     /*sets dropdown menu*/
     .navbar-nav{
-        background-color: $background;
+        background-color: none;
         text-align: center;
         border-top: solid $details;
         border-bottom: solid 1px $details;
 
-        @media (min-width: 768px){
+        @media (min-width: $toggle-change){
             /*HOW TO PUT LINKS TO RIGTH MARGIN*/
-            text-align: right;
             border-top: none;
             border-bottom: none;
         }
@@ -48,6 +66,12 @@ nav{
         .nav-item{
             border-bottom: solid 1px $background-text;
             color: $background-text;
+            opacity: 1;
+
+            /*mquery to avoid bot border in navbar titles pc*/
+            @media (min-width: $toggle-change){
+                border-bottom: none;
+            }
 
             /*set dropdown items text*/
             .nav-link{
@@ -60,4 +84,23 @@ nav{
 
     
 
+}
+
+#navBar{
+    //makes navbar color transition
+    transition: all 0.5s;
+}
+
+.navScroll{
+    //class added to navbar when scroll event is activated in js
+    background-color: $background;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+/*MAIN*/
+
+#landing{
+    width: 100%;
+    height: 1000px;
+    background-color: rgb(210, 210, 210);
 }
