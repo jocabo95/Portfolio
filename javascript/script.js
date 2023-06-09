@@ -5,8 +5,7 @@ const dropDownEl = document.querySelector("nav-item");
 
 window.addEventListener("scroll", () =>{
 
-    // 300 matched with navbar height
-    if(window.scrollY > 300){
+    if(window.scrollY > 90){
         navBarEl.classList.add("navScroll");
         dropDownEl.classList.add("navScroll");
     }

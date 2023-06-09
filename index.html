@@ -1,98 +1,166 @@
 <!DOCTYPE html>
 
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Jose Camargo Desarrollo web</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jose Camargo Desarrollo web</title>
 
-        <!--Bootstrap-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
 
-        <!--style links (must be after bootstrap links)-->
-        <link rel="stylesheet" href="css/home.css">
-        <link rel="stylesheet" href="css/headernfooter.css">
+    <!--style links (must be after bootstrap links)-->
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/headernfooter.css" />
 
-        <!--font awesome-->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+    <!--font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
 
-        <!--fonts-->
+    <!--fonts-->
+  </head>
 
-    </head>
-
-    <body>
-
-        <header>
-            
-            <!--navbar is created with <nav class="navbar navbar-default"
+  <body>
+    <header>
+      <!--navbar is created with <nav class="navbar navbar-default"
             navbar-default & navbar-inverse determine pre-established style
             d-print ensures navbar appear if website is printed
             navbar-expand-{-sm|-md|-lg|-xl} determines vw at which navbar dropdown deploys-->
-            <nav id="navBar" class="navbar navbar-expand-md fixed-top d-print py-0">
+      <nav id="navBar" class="navbar navbar-expand-md fixed-top d-print py-0">
+        <!--navbar-brand to fixate project name
+        ms-2 sets "margin start"-->
+        <a class="navbar-brand ms-2" href="index.html">
+          <img id="logo" src="images/logo.png" alt="home link" />
+        </a>
 
-                <!--navbar-brand to fixate project name
-                ms-2 sets "margin start"-->
-                <a class="navbar-brand ms-2" href="index.html">
-                    <img id="logo" src="images/logo.png" alt="home link">
-                </a>
-
-                <!--create collapsible button
+        <!--create collapsible button
                 me sets "margin end" margin-->
-                <button class="navbar-toggler me-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"  aria-expanded="false" aria-label="Toggle navigation">
-                    <i id="hamburguer" class="fas fa-bars"></i>
-                </button>
+        <button
+          class="navbar-toggler me-2"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i id="hamburguer" class="fas fa-bars"></i>
+        </button>
 
-                <!--asign button content with .collapse .navbar-collapse
+        <!--asign button content with .collapse .navbar-collapse
                 id="navbarSupportedContent" generates dropdown animation
                 flex-row-reverse sets navbar titles to flex end-->
-                <div class="collapse navbar-collapse flex-row-reverse" id="navbarSupportedContent">
-                    
-                    <!--using me-2  will ensure navbar titles right maragin in pc-->
-                    <ul class="navbar-nav me-2">
-
-                        <!--specify nav-item & nav-link
+        <div
+          class="collapse navbar-collapse flex-row-reverse"
+          id="navbarSupportedContent"
+        >
+          <!--using me-2  will ensure navbar titles right maragin in pc-->
+          <ul class="navbar-nav me-2">
+            <!--specify nav-item & nav-link
                         adding .actve to nav-item shows page is currently being visited-->
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Proyectos</a>
-                        </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Proyectos</a>
+            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sobre mi</a>
-                        </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre mi</a>
+            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Habilidades</a>
-                        </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Habilidades</a>
+            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
-                        </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div id="navbar-separator"></div>
+    </header>
 
-                    </ul>
-
-                </div>
-
-            </nav>
-            
-        </header>
-
-
-        <main>
-            <div id="landing">
-
+    <main>
+        <section  id="home" class="bgimage container-fluid">
+          <div id="home-img">
+          </div>  
+          <div id="hero-text">
+                
+              <h1 id="main-title">CodeCraft Solutions</h1>
+              <p id="home-text">Think big, Code bigger</p>
+          
             </div>
-        </main>
+        </section>
 
-        <footer>
+        <section id="servicios">
+          <h2>Servicios</h2>
 
-        </footer>
+          <div id="container-servicios">
+            <div class="item-servicios">
+              <div class="item-servicios-content">
+                <h3>Desarrollo Web</h3>
+                <p class="descripcion-servicio">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque nesciunt quod qui laboriosam alias exercitationem dicta magni accusantium, sapiente rem molestiae repellendus excepturi expedita a vero autem at, eligendi cum.</p>
+              </div>
+            </div>
+          </div>
+          <div id="container-servicios">
+            <div class="item-servicios">
+              <div class="item-servicios-content">
+                <h3>Desarrollo Web</h3>
+                <p class="descripcion-servicio">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque nesciunt quod qui laboriosam alias exercitationem dicta magni accusantium, sapiente rem molestiae repellendus excepturi expedita a vero autem at, eligendi cum.</p>
+              </div>
+            </div>
+          </div>
+          <div id="container-servicios">
+            <div class="item-servicios">
+              <div class="item-servicios-content">
+                <h3>Desarrollo Web</h3>
+                <p class="descripcion-servicio">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque nesciunt quod qui laboriosam alias exercitationem dicta magni accusantium, sapiente rem molestiae repellendus excepturi expedita a vero autem at, eligendi cum.</p>
+              </div>
+            </div>
+          </div>
+          <div id="container-servicios">
+            <div class="item-servicios">
+              <div class="item-servicios-content">
+                <h3>Desarrollo Web</h3>
+                <p class="descripcion-servicio">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque nesciunt quod qui laboriosam alias exercitationem dicta magni accusantium, sapiente rem molestiae repellendus excepturi expedita a vero autem at, eligendi cum.</p>
+              </div>
+            </div>
+          </div>
 
-        <!--JS-->
-        <script src="javascript/script.js"></script>
+           
 
-        <!--Bootstrap JS-->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    </body>
+          </div>
+          
+        </section>
+    </main>
+    
 
+    <footer>
+      <div id="credits">
+        <p>Creted by Codecraft Solutions</p>
+      </div>
+    </footer>
+
+    <!--JS-->
+    <script src="javascript/script.js"></script>
+
+    <!--Bootstrap JS-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

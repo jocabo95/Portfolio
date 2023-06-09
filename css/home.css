@@ -1,1 +1,116 @@
-/*# sourceMappingURL=home.css.map */
+/*navbar-expand-{-sm|-md|-lg|-xl}*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: black;
+}
+
+/*HOME*/
+#home {
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: black;
+}
+
+#home-img {
+  /*container that only has bg image and reduced opacity.
+   works with #home bg color to increase readability*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0.9;
+  background-image: url(/images/heroimg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#hero-text {
+  width: auto;
+  height: auto;
+  max-width: 50%;
+  position: relative;
+  z-index: 2;
+  margin: 7vw;
+  color: white;
+  text-shadow: -3px 3px 10px rgb(0, 0, 0);
+}
+#hero-text #main-title {
+  margin-bottom: 3vh;
+}
+@media (max-width: 768px) {
+  #hero-text #main-title {
+    font-size: 7vh;
+  }
+  #hero-text #home-text {
+    font-size: 2vh;
+  }
+}
+@media (min-width: 768px) {
+  #hero-text #main-title {
+    font-size: 10vh;
+  }
+  #hero-text #home-text {
+    font-size: 4vh;
+  }
+}
+
+/*SERVICIOS*/
+#servicios {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(63, 62, 62);
+  color: white;
+}
+#servicios h2 {
+  font-size: 3rem;
+  margin: 3rem 0rem;
+}
+#servicios #container-servicios {
+  width: auto;
+  height: auto;
+  border: solid white;
+  background-color: rgb(73, 87, 99);
+}
+@media (max-width: 768px) {
+  #servicios #container-servicios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  #servicios #container-servicios {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+#servicios .item-servicios {
+  width: 80%;
+  height: 20%;
+  text-align: center;
+}/*# sourceMappingURL=home.css.map */
