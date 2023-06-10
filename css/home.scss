@@ -1,9 +1,9 @@
-$background: rgb(18, 18, 18);
-$details: rgb(229, 168, 229);
-$background-text: white;
+$background: rgb(34, 34, 34);
+$details: rgb(234, 140, 32);
+$background-text: rgb(247, 247, 247);
 
 /*navbar-expand-{-sm|-md|-lg|-xl}*/
-$toggle-change: 768px;
+$toggle-change: 576px;
 
 *{
     margin: 0px;
@@ -93,27 +93,24 @@ main {
 #servicios{
     width: 100%;
     height: auto;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 
+    /*centers logos, h3 and content*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(63, 62, 62);
 
-    color: $background-text;
+    background-color: $background-text;
+    color: $background;
 
     h2{
         font-size: 3rem;
-        margin: 3rem 0rem;
+        text-shadow: -5px 5px 10px rgb(34, 34, 34, 0.2);
     }
 
-    #container-servicios {
-        width: auto;
-        height: auto;
-        border: solid white;
-        background-color: rgb(73, 87, 99);
-    }
-
+    /*small screens should have services as list*/
     @media (max-width: $toggle-change) {
         #container-servicios {
             display: flex;
@@ -121,24 +118,70 @@ main {
             justify-content: center;
             align-items: center;
 
-            gap: 1rem;
+            gap: 4rem;
+            margin: 0px 12vw 0px 12vw;
+        }
+
+        h2 {
+            margin-bottom: 3rem;
         }
     }
 
+    /*big screens should have services as table*/
     @media (min-width: $toggle-change) {
         #container-servicios {
             display: grid;
             grid-template-rows: 1fr 1fr;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: auto auto;
+            gap: 3rem;
+
+            margin: 0px 10vw 0px 10vw;
+        }
+
+        h2{
+            margin-bottom: 4rem;
         }
     }
 
-    .item-servicios{
-        width: 80%;
-        height: 20%;
 
-        text-align: center;
+    /*refers to each service card*/
+    .card-servicios{
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+
+        /*center each card content*/
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        
+
+        /*card style*/
+        border: solid thin rgb(34, 34, 34, 0.2);
+        border-radius: 5px;
+        box-shadow: 0px 5px 10px 2px rgb(32, 32, 32, 0.2);
+        transition: all 0.2s; /*helps .car-servicios:hover when "lowering card"*/
+
+        h3 {
+            width: 100%;
+            font-size: 1.5rem;
+            margin: 1rem 0px 1rem 0px;
+        }
+
+        .descripcion-servicio{
+            font-size: 1rem;
+        }
     }
+
+    .card-servicios:hover{
+        /*card style*/
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 20px rgb(32, 32, 32, 0.3);
+        transition: all 0.2s;
+    }
+
+   
 }
 
 
