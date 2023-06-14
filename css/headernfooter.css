@@ -37,6 +37,7 @@ nav .navbar-toggler:focus, nav .navbar-toggler:active, nav .navbar-toggler-icon:
   }
 }
 nav .navbar-nav {
+  font-family: "Montserrat", sans-serif;
   background-color: none;
   text-align: center;
   border-top: solid rgb(207, 114, 114);
@@ -77,8 +78,44 @@ nav .navbar-nav .nav-item .nav-link {
 }
 
 /*FOOTER - RESPONSIVE*/
-footer {
+footer, #footer-text-container {
   height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  width: 100%;
+  padding: 0rem 2rem 0rem 2rem;
   background-color: rgb(34, 34, 34);
   color: rgb(247, 247, 247);
+}
+footer #footer-text-container {
+  width: auto;
+  padding: 4rem 5rem 0rem 5rem;
+}
+footer .footer-text {
+  margin-bottom: 0rem;
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+}
+footer #holla-button {
+  margin: 2.5rem 4rem 4rem 4rem;
+  font-size: 0.7rem;
+  background-color: rgb(247, 247, 247);
+  color: rgb(34, 34, 34);
+}
+footer #copyright {
+  width: 100%;
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  opacity: 0.6;
+  border-top: solid thin rgb(207, 114, 114);
+}
+footer #copyright > p {
+  font-size: 0.5rem;
 }/*# sourceMappingURL=headernfooter.css.map */

@@ -25,6 +25,18 @@
     />
 
     <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Montserrat&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <!--
+      font-family: 'Montserrat', sans-serif;
+
+      font-family: 'Playfair Display', serif;
+
+      font-family: 'Lato', sans-serif;
+    -->
   </head>
 
   <body>
@@ -50,7 +62,8 @@
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
-        >
+          onclick="dropDownBackground()">
+
           <i id="hamburguer" class="fas fa-bars"></i>
         </button>
 
@@ -92,7 +105,7 @@
           <div id="hero-text">
                 
               <h1 id="main-title">CodeCraft</h1>
-              <p id="home-text">Think big, Code bigger</p>
+              <p id="home-text">Dream big, Code bigger</p>
           
             </div>
         </section>
@@ -104,26 +117,34 @@
           <div id="container-servicios">
 
             <div class="card-servicios">
-              <i class="fa fa-code"></i>
-              <h3>Desarrollo Web</h3>
+              <div class="card-tag">
+                <i class="fa fa-code"></i>
+                <h3>Desarrollo Web</h3>
+              </div>
               <p class="descripcion-servicio">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque nesciunt quod qui laboriosam ali</p>
             </div>
 
             <div class="card-servicios">
-              <i class="fa fa-desktop"></i>
-              <h3>Diseño Web</h3>
+              <div class="card-tag">
+                <i class="fa fa-desktop"></i>
+                <h3>Diseño Web</h3>
+              </div>
               <p class="descripcion-servicio">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque nesciunt quod qui laboriosam ali</p>
             </div>
 
             <div class="card-servicios">
-              <i class="fa fa-cloud"></i>
-              <h3>Despliegue Web</h3>
+              <div class="card-tag">
+                <i class="fa fa-cloud"></i>
+                <h3>Despliegue Web</h3>
+              </div>
               <p class="descripcion-servicio">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque nesciunt quod qui laboriosam ali</p>
             </div>
 
             <div class="card-servicios">
-              <i class="fa fa-search"></i>
-              <h3>Estrategia SEO</h3>
+              <div class="card-tag">
+                <i class="fa fa-search"></i>
+                <h3>Estrategia SEO</h3>
+              </div>
               <p class="descripcion-servicio">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque nesciunt quod qui laboriosam ali</p>
             </div>
 
@@ -137,8 +158,13 @@
     
 
     <footer>
-      <div id="credits">
-        <p>Creted by Codecraft Solutions</p>
+      <div id="footer-text-container">
+        <p class="footer-text">Lets start a project</p>
+        <p class="footer-text">together!</p>
+        <button id="holla-button" class="btn btn-default">Holla at me</button>
+      </div>
+      <div id="copyright">
+        <p>© All rights reserved. Created by CodeCraft</p>
       </div>
     </footer>
 

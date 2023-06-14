@@ -3,24 +3,20 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-}
-
-html {
-  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 main {
   width: 100%;
   height: auto;
-  position: relative;
   background-color: black;
 }
 
 /*HOME*/
 #home {
   height: 100vh;
-  position: relative;
-  z-index: 0;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -35,9 +31,9 @@ main {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1;
   opacity: 0.9;
   background-image: url(/images/heroimg.jpg);
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
 }
@@ -46,6 +42,7 @@ main {
   width: auto;
   height: auto;
   max-width: 50%;
+  /*necesary. otherwise text appears with lower opaccity*/
   position: relative;
   z-index: 2;
   margin: 7vw;
@@ -53,14 +50,20 @@ main {
   text-shadow: -3px 3px 10px rgb(0, 0, 0);
 }
 #hero-text #main-title {
-  margin-bottom: 3vh;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0rem;
+}
+#hero-text #home-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  margin-left: 1vh;
 }
 @media (max-width: 576px) {
   #hero-text #main-title {
     font-size: 7vh;
   }
   #hero-text #home-text {
-    font-size: 2vh;
+    font-size: 1rem;
   }
 }
 @media (min-width: 576px) {
@@ -78,7 +81,7 @@ main {
   height: auto;
   padding-top: 4rem;
   padding-bottom: 4rem;
-  /*centers logos, h3 and content*/
+  /*centers h3 and content*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,6 +93,7 @@ main {
   /*refers to each service card*/
 }
 #servicios h2 {
+  font-family: "Playfair Display", serif;
   font-size: 3rem;
   text-shadow: -5px 5px 10px rgba(34, 34, 34, 0.2);
 }
@@ -110,7 +114,7 @@ main {
   #servicios #container-servicios {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     gap: 3rem;
     margin: 0px 10vw 0px 10vw;
   }
@@ -121,29 +125,45 @@ main {
 #servicios .card-servicios {
   width: 100%;
   height: auto;
-  padding: 2rem;
+  padding-top: 0rem;
   /*center each card content*/
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   /*card style*/
   border: solid thin rgba(34, 34, 34, 0.2);
-  border-radius: 5px;
+  border-radius: 0px 0px 5px 5px;
   box-shadow: 0px 5px 10px 2px rgba(32, 32, 32, 0.2);
   transition: all 0.2s; /*helps .car-servicios:hover when "lowering card"*/
 }
+#servicios .card-servicios .card-tag {
+  width: 80%;
+  height: auto;
+  padding: 0.5rem 1rem 1rem 1rem;
+  background-color: rgba(34, 34, 34, 0.9);
+  color: rgb(247, 247, 247);
+  border-radius: 0px 0px 8px 8px;
+  transition: all 0.2s;
+}
 #servicios .card-servicios h3 {
-  width: 100%;
-  font-size: 1.5rem;
-  margin: 1rem 0px 1rem 0px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0.5rem 0px 0rem 0px;
 }
 #servicios .card-servicios .descripcion-servicio {
   font-size: 1rem;
+  margin: 0.5rem 1rem 1rem 1rem;
 }
 #servicios .card-servicios:hover {
   /*card style*/
   transform: translateY(-5px);
   box-shadow: 0px 10px 20px rgba(32, 32, 32, 0.3);
+  transition: all 0.2s;
+}
+#servicios .card-servicios:hover .card-tag {
+  background-color: rgb(34, 34, 34);
+  box-shadow: 0px 5px 10px rgba(32, 32, 32, 0.3);
   transition: all 0.2s;
 }/*# sourceMappingURL=home.css.map */

@@ -25,6 +25,7 @@ nav{
         /*.nav-toggler is button container*/
         padding: 0.4rem; /*gives margin space to button icon*/
         border: none;
+        
 
         /*style hammburger icon*/
         i{
@@ -52,6 +53,7 @@ nav{
 
     /*sets dropdown menu*/
     .navbar-nav{
+        font-family: 'Montserrat', sans-serif;
         background-color: none;
         text-align: center;
         border-top: solid $details;
@@ -99,8 +101,53 @@ nav{
 }
 
 /*FOOTER - RESPONSIVE*/
-footer{
+footer, #footer-text-container{
     height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    padding: 0rem 2rem 0rem 2rem;
     background-color: $background;
     color: $background-text;
+
+    #footer-text-container {
+        width: auto;
+        padding: 4rem 5rem 0rem 5rem;
+    }
+    
+    .footer-text {
+        margin-bottom: 0rem;
+        font-size: 2rem;
+        font-weight: 300;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    #holla-button {
+        margin: 2.5rem 4rem 4rem 4rem;
+        font-size: 0.7rem;
+        background-color: $background-text;
+        color: $background;
+    }
+
+    #copyright {
+        width: 100%;
+        padding-top: 0.5rem;
+
+        display: flex;
+        justify-content: flex-start;
+
+        opacity: 0.6;
+        border-top: solid thin $details;
+    }
+
+    #copyright > p {
+        font-size: 0.5rem;
+    }
 }
+
