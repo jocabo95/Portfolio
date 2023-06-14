@@ -116,6 +116,7 @@ main {
     /*small screens should have services as list*/
     @media (max-width: $toggle-change) {
         #container-servicios {
+            max-width: 60%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -133,6 +134,7 @@ main {
     /*big screens should have services as table*/
     @media (min-width: $toggle-change) {
         #container-servicios {
+            max-width: min(60vw, 40rem);
             display: grid;
             grid-template-rows: 1fr 1fr;
             grid-template-columns: 1fr 1fr;
@@ -148,6 +150,8 @@ main {
 
 
     /*refers to each service card*/
+
+
     .card-servicios{
         width: 100%;
         height: auto;

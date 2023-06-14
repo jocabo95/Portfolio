@@ -25,11 +25,20 @@
     />
 
     <!--fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Montserrat&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Montserrat&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
     <!--
       font-family: 'Montserrat', sans-serif;
 
@@ -41,43 +50,35 @@
 
   <body>
     <header>
+      
       <!--navbar is created with <nav class="navbar navbar-default"
             navbar-default & navbar-inverse determine pre-established style
             d-print ensures navbar appear if website is printed
             navbar-expand-{-sm|-md|-lg|-xl} determines vw at which navbar dropdown deploys-->
       <nav id="navBar" class="navbar navbar-expand-sm fixed-top d-print py-0">
+        
         <!--navbar-brand to fixate project name
         ms-2 sets "margin start"-->
-        <a class="navbar-brand ms-2" href="index.html">
+        <a class="navbar-brand ms-2 " href="index.html">
           <img id="logo" src="images/logo.png" alt="home link" />
         </a>
 
         <!--create collapsible button
-                me sets "margin end" margin-->
-        <button
-          class="navbar-toggler me-2"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          onclick="dropDownBackground()">
-
+        me sets "margin end" margin-->
+        <button class="navbar-toggler me-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="dropDownBackground()">
           <i id="hamburguer" class="fas fa-bars"></i>
         </button>
 
         <!--asign button content with .collapse .navbar-collapse
-                id="navbarSupportedContent" generates dropdown animation
-                flex-row-reverse sets navbar titles to flex end-->
-        <div
-          class="collapse navbar-collapse flex-row-reverse"
-          id="navbarSupportedContent"
-        >
+        id="navbarSupportedContent" generates dropdown animation
+        flex-row-reverse sets navbar titles to flex end-->
+        <div class="collapse navbar-collapse flex-row-reverse" id="navbarSupportedContent">
+          
           <!--using me-2  will ensure navbar titles right maragin in pc-->
           <ul class="navbar-nav me-2">
+
             <!--specify nav-item & nav-link
-                        adding .actve to nav-item shows page is currently being visited-->
+            adding .actve to nav-item shows page is currently being visited-->
             <li class="nav-item">
               <a class="nav-link" href="#">Proyectos</a>
             </li>
@@ -93,74 +94,108 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Contacto</a>
             </li>
+
           </ul>
+
         </div>
+
       </nav>
+
     </header>
 
     <main>
-        <section  id="home" class="bgimage container-fluid">
-          <div id="home-img">
-          </div>  
-          <div id="hero-text">
-                
-              <h1 id="main-title">CodeCraft</h1>
-              <p id="home-text">Dream big, Code bigger</p>
-          
-            </div>
-        </section>
+      <section id="home" class="bgimage container-fluid">
 
-        <section id="servicios">
-          <h2>Servicios</h2>
-          
+        <div id="home-img"></div>
 
-          <div id="container-servicios">
+        <div id="hero-text">
 
-            <div class="card-servicios">
-              <div class="card-tag">
-                <i class="fa fa-code"></i>
-                <h3>Desarrollo Web</h3>
-              </div>
-              <p class="descripcion-servicio">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque nesciunt quod qui laboriosam ali</p>
-            </div>
+          <h1 id="main-title">CodeCraft</h1>
+          <p id="home-text">Dream big, Code bigger</p>
 
-            <div class="card-servicios">
-              <div class="card-tag">
-                <i class="fa fa-desktop"></i>
-                <h3>Diseño Web</h3>
-              </div>
-              <p class="descripcion-servicio">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque nesciunt quod qui laboriosam ali</p>
+        </div>
+
+      </section>
+
+      <section id="servicios">
+
+        <h2>Servicios</h2>
+
+        <div id="container-servicios">
+
+          <div class="card-servicios">
+
+            <div class="card-tag">
+
+              <i class="fa fa-code"></i>
+              <h3>Desarrollo Web</h3>
+
             </div>
 
-            <div class="card-servicios">
-              <div class="card-tag">
-                <i class="fa fa-cloud"></i>
-                <h3>Despliegue Web</h3>
-              </div>
-              <p class="descripcion-servicio">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque nesciunt quod qui laboriosam ali</p>
-            </div>
-
-            <div class="card-servicios">
-              <div class="card-tag">
-                <i class="fa fa-search"></i>
-                <h3>Estrategia SEO</h3>
-              </div>
-              <p class="descripcion-servicio">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque nesciunt quod qui laboriosam ali</p>
-            </div>
+            <p class="descripcion-servicio">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque
+              nesciunt quod qui laboriosam ali
+            </p>
 
           </div>
 
-          
+          <div class="card-servicios">
 
-        </section>
+            <div class="card-tag">
+
+              <i class="fa fa-desktop"></i>
+              <h3>Diseño Web</h3>
+
+            </div>
+
+            <p class="descripcion-servicio">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque
+              nesciunt quod qui laboriosam ali
+            </p>
+
+          </div>
+
+          <div class="card-servicios">
+
+            <div class="card-tag">
+
+              <i class="fa fa-cloud"></i>
+              <h3>Despliegue Web</h3>
+
+            </div>
+
+            <p class="descripcion-servicio">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque
+              nesciunt quod qui laboriosam ali
+            </p>
+
+          </div>
+
+          <div class="card-servicios">
+
+            <div class="card-tag">
+
+              <i class="fa fa-search"></i>
+              <h3>Estrategia SEO</h3>
+
+            </div>
+
+            <p class="descripcion-servicio">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque
+              nesciunt quod qui laboriosam ali
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
 
     </main>
-    
 
     <footer>
       <div id="footer-text-container">
-        <p class="footer-text">Lets start a project</p>
-        <p class="footer-text">together!</p>
+        <p class="footer-text">Lets start a project<br> together!</p> 
         <button id="holla-button" class="btn btn-default">Holla at me</button>
       </div>
       <div id="copyright">

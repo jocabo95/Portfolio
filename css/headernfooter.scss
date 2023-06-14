@@ -16,7 +16,7 @@ nav{
     
     /*set logos size*/
     #logo{
-    width: 70px;
+        width: 50px;
     }
 
     /*set dropdown button color*/
@@ -116,23 +116,51 @@ footer {
     background-color: $background;
     color: $background-text;
 
-    #footer-text-container {
-        width: auto;
-        padding: 4rem 5rem 0rem 5rem;
+    @media (max-width: $toggle-change){
+        #footer-text-container {
+            width: 100%;
+            padding: 4rem 0rem 0rem 0rem;
+        }
+        .footer-text {
+            font-size: min(2rem, 10vw);
+        }
     }
+
+    @media (min-width: $toggle-change){
+        #footer-text-container {
+            width: 100%;
+            padding: 5rem 5rem 0rem 5rem;
+        }
+        .footer-text{
+            font-size: max(3rem, 2vw);
+        }
+    }
+    
     
     .footer-text {
         margin-bottom: 0rem;
-        font-size: 2rem;
         font-weight: 300;
         font-family: 'Montserrat', sans-serif;
+
+        text-align: center;
     }
 
+
     #holla-button {
-        margin: 2.5rem 4rem 4rem 4rem;
-        font-size: 0.7rem;
+        margin: 2rem 4rem 4rem 4rem;
+        font-size: 0.6rem;
         background-color: $background-text;
         color: $background;
+        font-family: 'Montserrat', sans-serif;
+        transition: all 0.9s;
+    }
+
+    #holla-button:hover {
+        font-size: 0.8rem;
+        background-color: $details;
+        color: $background-text;
+        border-radius: 20px;
+        transition: all 0.9s;
     }
 
     #copyright {
