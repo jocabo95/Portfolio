@@ -1,4 +1,5 @@
 /*navbar-expand-{-sm|-md|-lg|-xl}*/
+/*PC display*/
 * {
   margin: 0px;
   padding: 0px;
@@ -38,41 +39,45 @@ main {
   background-position: center;
 }
 
+/*query for  hero-text in small vp*/
+@media (max-width: 576px) {
+  #hero-text {
+    margin-left: calc(50px + 0.25rem);
+  }
+  #main-title {
+    font-size: 7vh;
+  }
+  #home-text {
+    font-size: 4vh;
+  }
+}
+/*query for  hero-text in big vp*/
+@media (min-width: 576px) {
+  #hero-text {
+    margin-left: 15%;
+  }
+  #main-title {
+    font-size: 10vh;
+  }
+  #home-text {
+    font-size: 6vh;
+  }
+}
 #hero-text {
-  width: auto;
-  height: auto;
-  max-width: 50%;
   /*necesary. otherwise text appears with lower opaccity*/
   position: relative;
   z-index: 2;
-  margin: 7vw;
   color: rgb(247, 247, 247);
   text-shadow: -3px 3px 10px rgb(0, 0, 0);
 }
 #hero-text #main-title {
   font-family: "Playfair Display", serif;
-  margin-bottom: 0rem;
+  margin-bottom: 1rem;
 }
 #hero-text #home-text {
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
   margin-left: 1vh;
-}
-@media (max-width: 576px) {
-  #hero-text #main-title {
-    font-size: 7vh;
-  }
-  #hero-text #home-text {
-    font-size: 1rem;
-  }
-}
-@media (min-width: 576px) {
-  #hero-text #main-title {
-    font-size: 10vh;
-  }
-  #hero-text #home-text {
-    font-size: 4vh;
-  }
 }
 
 /*SERVICIOS*/

@@ -13,8 +13,11 @@ window.addEventListener("scroll", () =>{
 
 })
 
+/*make navbar solid color if dropdown activated at positio 0*/
 function dropDownBackground () {
     navBarEl.classList.add("navScroll");
 }
+
+
 
 

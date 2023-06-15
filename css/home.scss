@@ -5,6 +5,9 @@ $background-text: rgb(247, 247, 247);
 /*navbar-expand-{-sm|-md|-lg|-xl}*/
 $toggle-change: 576px;
 
+/*PC display*/
+$pc-viewport: 1024px;
+
 *{
     margin: 0px;
     padding: 0px;
@@ -49,46 +52,56 @@ main {
     background-position: center; // ensures img center is always in screen center
 }
 
+/*query for  hero-text in small vp*/
+@media (max-width: $toggle-change) {
+    #hero-text {
+        margin-left: calc(50px + 0.25rem);
+    }
+
+    #main-title {
+        font-size: 7vh;
+    }
+
+    #home-text {
+        font-size: 4vh;
+    }
+}
+
+/*query for  hero-text in big vp*/
+@media (min-width: $toggle-change) {
+    #hero-text {
+        margin-left: 15%;
+    }
+
+    #main-title {
+        font-size: 10vh;
+    }
+
+    #home-text {
+        font-size: 6vh;
+    }
+}
+
 #hero-text{
-    width: auto;
-    height: auto;
-    max-width: 50%;
 
     /*necesary. otherwise text appears with lower opaccity*/
     position: relative;
     z-index: 2;
 
-    margin: 7vw;
     color: $background-text;
     text-shadow: -3px 3px 10px rgb(0, 0, 0);
 
     #main-title{
         font-family: 'Playfair Display', serif;
-        margin-bottom: 0rem;
+        margin-bottom: 1rem;
     }
 
     #home-text{
         font-family: 'Montserrat', sans-serif;
         font-weight: 200;
-        margin-left: 1vh;
+        margin-left: 1vh; // makes text look aligned with title
     }
 
-    @media (max-width: $toggle-change){
-        #main-title {
-            font-size: 7vh;
-        }
-        #home-text{
-            font-size: 1rem;
-        }
-    }
-    @media (min-width: $toggle-change){
-        #main-title {
-            font-size: 10vh;
-        }
-        #home-text {
-            font-size: 4vh;
-        }
-    }
 }
 
 /*SERVICIOS*/
@@ -206,7 +219,6 @@ main {
             transition: all 0.2s;
         }
     }
-
    
 }
 
