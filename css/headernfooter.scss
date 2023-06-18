@@ -116,6 +116,7 @@ footer {
     background-color: $background;
     color: $background-text;
 
+    /*query for text size small vp*/
     @media (max-width: $toggle-change){
         #footer-text-container {
             width: 100%;
@@ -126,6 +127,7 @@ footer {
         }
     }
 
+    /*query for text size big vp*/
     @media (min-width: $toggle-change){
         #footer-text-container {
             width: 100%;
@@ -146,6 +148,7 @@ footer {
         transition: all 1.5s;
     }
 
+    // class for when bottom of page is reached
     .footer-text-colored{
         color: $details;
         transition: all 1.5s;
@@ -156,17 +159,25 @@ footer {
         margin: 2rem 4rem 4rem 4rem;
         font-size: 0.6rem;
         font-weight: 600;
-        background-color: $details;
-        color: $background;
-        font-family: 'Montserrat', sans-serif;
-        transition: all 1.5s;
-    }
-
-    .holla-button-colored {
-        font-weight: 600;
         border-radius: 20px;
         background-color: $background-text;
-        transition:all 1.5s;
+        color: $background;
+        font-family: 'Montserrat', sans-serif;
+        transition: all 0.6s;
+    }
+
+    #footer-button:hover{
+        font-size: 0.62rem;
+
+        color: $background;
+        background-color: $background-text;
+        box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.35);
+        transition: all 0.6s;
+    }
+
+    #footer-button:active {
+        box-shadow: 0px 0px 0px;
+        transition: all 0.1s;
     }
 
     #copyright {

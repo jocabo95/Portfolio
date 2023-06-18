@@ -21,21 +21,19 @@ function dropDownBackground () {
 /*Change footer text color when bottom is reached*/
 
 let footerText = document.getElementById("footer-text");
-let hollaButton = document.querySelector(".holla-button");
 
 let docHeight = document.documentElement.scrollHeight;
 let windowHeight = window.innerHeight;
+let scrollPadding = windowHeight * 0.1;
 
 window.addEventListener("scroll", ()=>{
     
-    let scrollPosition = window.scrollY + windowHeight;
+    let scrollPosition = window.pageYOffset + windowHeight;
 
-    if(scrollPosition >= docHeight){
+    if(scrollPosition >= docHeight - scrollPadding){
         footerText.classList.add("footer-text-colored");
-        hollaButton.classList.add("holla-button-colored");
     }
     else{
         footerText.classList.remove("footer-text-colored");
-        hollaButton.classList.remove("holla-button-colored");
     }
 })
