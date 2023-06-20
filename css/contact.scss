@@ -1,0 +1,75 @@
+$background: rgb(34, 34, 34);
+$details: rgb(207, 114, 114);
+$background-text: rgb(247, 247, 247);
+
+/*navbar-expand-{-sm|-md|-lg|-xl}*/
+$toggle-change: 576px;
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+
+#contact{
+    height: 100vh;
+    background-color: $background-text;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        text-shadow: -5px 5px 10px rgb(34, 34, 34, 0.2);
+    }
+
+    
+    .icon-container{
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: min(10vw, 3rem);
+    }
+
+    a{
+  
+        i{
+            color: $background;
+            font-size: 2rem;
+            transition: all 0.3s;
+        } 
+    }
+    
+
+    a:hover{
+        border-bottom: solid thin $details;
+
+        i{
+            translate: 0px -5px 0px;
+            transition: all 0.2s;
+        }
+    }
+
+    a:active {
+        border-bottom: solid thin $background;
+
+        i {
+            translate: 0px -3px 0px;
+            transition: all 0s;
+        }
+    }
+}

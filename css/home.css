@@ -45,10 +45,10 @@ main {
     margin-left: calc(50px + 0.25rem);
   }
   #main-title {
-    font-size: 7vh;
+    font-size: max(7vh, 3.5rem);
   }
   #home-text {
-    font-size: 4vh;
+    font-size: max(4vh, 1.5rem);
   }
 }
 /*query for  hero-text in big vp*/
@@ -57,10 +57,10 @@ main {
     margin-left: 15%;
   }
   #main-title {
-    font-size: 10vh;
+    font-size: max(10vh, 3.5rem);
   }
   #home-text {
-    font-size: 6vh;
+    font-size: max(6vh, 1.5rem);
   }
 }
 #hero-text {

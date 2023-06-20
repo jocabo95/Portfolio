@@ -69,7 +69,7 @@ nav{
         .nav-item{
             border-bottom: solid 1px $background-text;
             color: $background-text;
-            opacity: 1;
+            transition: all 0.3s;
 
             /*mquery to avoid bot border in navbar titles pc*/
             @media (min-width: $toggle-change){
@@ -78,8 +78,43 @@ nav{
 
             /*set dropdown items text*/
             .nav-link{
+                height: auto;
                 font-size: 1rem;
                 color: $background-text;
+            }
+        }
+
+        // query for small vp. animate dropdown titles
+        @media (max-width: $toggle-change) {
+            .nav-item:hover {
+                .nav-link{
+                    opacity: 0.6;
+                }
+                transition: all 0.3s;
+
+            }
+
+            .nav-item:active {
+                .nav-link {
+                    opacity: 0.4;
+                }
+                transition: all 0s;
+            }
+        }
+
+        // query for big vp. animate navbar titles
+        @media (min-width: $toggle-change){
+            .nav-item:hover {
+                translate: 0px -3px 0px;
+                border-bottom: solid thin rgb(255, 255, 255, 0.2);
+                transition: all 0s;
+        
+            }
+        
+            .nav-item:active {
+                border-bottom: solid thin $details;
+                translate: 0px -2px 0px;
+                transition: all 0s;
             }
         }
 
@@ -98,6 +133,11 @@ nav{
     //class added to navbar when scroll event is activated in js
     background-color: $background;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav:hover{
+    background-color: $background;
+    transition: all 0.5s;
 }
 
 /*FOOTER - RESPONSIVE*/

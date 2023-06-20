@@ -54,7 +54,7 @@ nav .navbar-nav {
 nav .navbar-nav .nav-item {
   border-bottom: solid 1px rgb(247, 247, 247);
   color: rgb(247, 247, 247);
-  opacity: 1;
+  transition: all 0.3s;
   /*mquery to avoid bot border in navbar titles pc*/
   /*set dropdown items text*/
 }
@@ -64,8 +64,35 @@ nav .navbar-nav .nav-item {
   }
 }
 nav .navbar-nav .nav-item .nav-link {
+  height: auto;
   font-size: 1rem;
   color: rgb(247, 247, 247);
+}
+@media (max-width: 576px) {
+  nav .navbar-nav .nav-item:hover {
+    transition: all 0.3s;
+  }
+  nav .navbar-nav .nav-item:hover .nav-link {
+    opacity: 0.6;
+  }
+  nav .navbar-nav .nav-item:active {
+    transition: all 0s;
+  }
+  nav .navbar-nav .nav-item:active .nav-link {
+    opacity: 0.4;
+  }
+}
+@media (min-width: 576px) {
+  nav .navbar-nav .nav-item:hover {
+    translate: 0px -3px 0px;
+    border-bottom: solid thin rgba(255, 255, 255, 0.2);
+    transition: all 0s;
+  }
+  nav .navbar-nav .nav-item:active {
+    border-bottom: solid thin rgb(207, 114, 114);
+    translate: 0px -2px 0px;
+    transition: all 0s;
+  }
 }
 
 #navBar {
@@ -75,6 +102,11 @@ nav .navbar-nav .nav-item .nav-link {
 .navScroll {
   background-color: rgb(34, 34, 34);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav:hover {
+  background-color: rgb(34, 34, 34);
+  transition: all 0.5s;
 }
 
 /*FOOTER - RESPONSIVE*/
