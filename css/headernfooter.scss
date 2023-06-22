@@ -1,6 +1,10 @@
-$background: rgb(34, 34, 34);
-$details: rgb(207, 114, 114);
-$background-text: rgb(247, 247, 247);
+// $background: rgb(34, 34, 34);
+// $details: rgb(207, 114, 114);
+// $background-text: rgb(247, 247, 247);
+
+$background: #182b49;
+$details: #ef402f;
+$background-text: #e5e9f2;
 
 /*navbar-expand-{-sm|-md|-lg|-xl}*/
 $toggle-change: 576px;
@@ -56,8 +60,8 @@ nav{
         font-family: 'Montserrat', sans-serif;
         background-color: none;
         text-align: center;
-        border-top: solid $details;
-        border-bottom: solid 1px $details;
+        border-top: solid thin $details;
+        border-bottom: solid thin $details;
 
         @media (min-width: $toggle-change){
             /*HOW TO PUT LINKS TO RIGTH MARGIN*/
@@ -104,16 +108,22 @@ nav{
 
         // query for big vp. animate navbar titles
         @media (min-width: $toggle-change){
+
+            .nav-item{
+                margin-left: 0.2rem;
+                text-align: center;
+            }
             .nav-item:hover {
                 translate: 0px -3px 0px;
-                border-bottom: solid thin rgb(255, 255, 255, 0.2);
-                transition: all 0s;
-        
+                border-radius: 10px;
+                // border-bottom: solid thin $details;
+                box-shadow: -5px -5px 10px rgb(229, 233, 242, 0.1), 5px 5px 10px rgb(7, 7, 7, 0.3);
+                transition: all 0.3s;
             }
         
             .nav-item:active {
-                border-bottom: solid thin $details;
                 translate: 0px -2px 0px;
+                box-shadow: -5px -5px 10px rgb(229, 233, 242, 0.1), 5px 5px 10px rgb(7, 7, 7, 0.3), inset -5px -5px 10px rgb(229, 233, 242, 0.1), inset 5px 5px 10px rgb(7, 7, 7, 0.3);
                 transition: all 0s;
             }
         }
@@ -196,28 +206,29 @@ footer {
 
 
     .holla-button {
-        margin: 2rem 4rem 4rem 4rem;
-        font-size: 0.6rem;
-        font-weight: 600;
-        border-radius: 20px;
-        background-color: $background-text;
-        color: $background;
         font-family: 'Montserrat', sans-serif;
-        transition: all 0.6s;
+        font-size: 0.6rem;
+
+        border-radius: 10px;
+        border: none;
+        margin: 2rem 4rem 4rem 4rem;
+        
+        background-color: $background;
+        color: $background-text;
+
+        box-shadow: -5px -5px 10px rgb(229, 233, 242, 0.1), 5px 5px 10px rgb(7, 7, 7, 0.3);
+        transition: all 0.5s;
     }
 
     #footer-button:hover{
-        font-size: 0.62rem;
-
-        color: $background;
-        background-color: $background-text;
-        box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.35);
-        transition: all 0.6s;
+        translate: 0px -1.5px 0px;
+        transition: all 0.3s;
     }
 
-    #footer-button:active {
-        box-shadow: 0px 0px 0px;
-        transition: all 0.1s;
+    #footer-button:active, #footer-button:visited {
+        border: none;
+        box-shadow: -5px -5px 10px rgb(229, 233, 242, 0.1), 5px 5px 10px rgb(7, 7, 7, 0.3), inset -5px -5px 10px rgb(229, 233, 242, 0.1), inset 5px 5px 10px rgb(7, 7, 7, 0.3);
+        transition: all 0s;
     }
 
     #copyright {

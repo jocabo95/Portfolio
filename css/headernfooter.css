@@ -22,7 +22,7 @@ nav .navbar-toggler {
 nav .navbar-toggler i {
   width: 3vw;
   height: auto;
-  color: rgb(247, 247, 247);
+  color: #e5e9f2;
 }
 nav .navbar-toggler:focus, nav .navbar-toggler:active, nav .navbar-toggler-icon:focus {
   outline: none;
@@ -40,8 +40,8 @@ nav .navbar-nav {
   font-family: "Montserrat", sans-serif;
   background-color: none;
   text-align: center;
-  border-top: solid rgb(207, 114, 114);
-  border-bottom: solid 1px rgb(207, 114, 114);
+  border-top: solid thin #ef402f;
+  border-bottom: solid thin #ef402f;
   /*set dropwdown items*/
 }
 @media (min-width: 576px) {
@@ -52,8 +52,8 @@ nav .navbar-nav {
   }
 }
 nav .navbar-nav .nav-item {
-  border-bottom: solid 1px rgb(247, 247, 247);
-  color: rgb(247, 247, 247);
+  border-bottom: solid 1px #e5e9f2;
+  color: #e5e9f2;
   transition: all 0.3s;
   /*mquery to avoid bot border in navbar titles pc*/
   /*set dropdown items text*/
@@ -66,7 +66,7 @@ nav .navbar-nav .nav-item {
 nav .navbar-nav .nav-item .nav-link {
   height: auto;
   font-size: 1rem;
-  color: rgb(247, 247, 247);
+  color: #e5e9f2;
 }
 @media (max-width: 576px) {
   nav .navbar-nav .nav-item:hover {
@@ -83,14 +83,19 @@ nav .navbar-nav .nav-item .nav-link {
   }
 }
 @media (min-width: 576px) {
+  nav .navbar-nav .nav-item {
+    margin-left: 0.2rem;
+    text-align: center;
+  }
   nav .navbar-nav .nav-item:hover {
     translate: 0px -3px 0px;
-    border-bottom: solid thin rgba(255, 255, 255, 0.2);
-    transition: all 0s;
+    border-radius: 10px;
+    box-shadow: -5px -5px 10px rgba(229, 233, 242, 0.1), 5px 5px 10px rgba(7, 7, 7, 0.3);
+    transition: all 0.3s;
   }
   nav .navbar-nav .nav-item:active {
-    border-bottom: solid thin rgb(207, 114, 114);
     translate: 0px -2px 0px;
+    box-shadow: -5px -5px 10px rgba(229, 233, 242, 0.1), 5px 5px 10px rgba(7, 7, 7, 0.3), inset -5px -5px 10px rgba(229, 233, 242, 0.1), inset 5px 5px 10px rgba(7, 7, 7, 0.3);
     transition: all 0s;
   }
 }
@@ -100,12 +105,12 @@ nav .navbar-nav .nav-item .nav-link {
 }
 
 .navScroll {
-  background-color: rgb(34, 34, 34);
+  background-color: #182b49;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 nav:hover {
-  background-color: rgb(34, 34, 34);
+  background-color: #182b49;
   transition: all 0.5s;
 }
 
@@ -121,8 +126,8 @@ footer, #footer-text-container {
 footer {
   width: 100%;
   padding: 0rem 2rem 0rem 2rem;
-  background-color: rgb(34, 34, 34);
-  color: rgb(247, 247, 247);
+  background-color: #182b49;
+  color: #e5e9f2;
   /*query for text size small vp*/
   /*query for text size big vp*/
 }
@@ -152,29 +157,28 @@ footer #footer-text {
   transition: all 1.5s;
 }
 footer .footer-text-colored {
-  color: rgb(207, 114, 114);
+  color: #ef402f;
   transition: all 1.5s;
 }
 footer .holla-button {
-  margin: 2rem 4rem 4rem 4rem;
-  font-size: 0.6rem;
-  font-weight: 600;
-  border-radius: 20px;
-  background-color: rgb(247, 247, 247);
-  color: rgb(34, 34, 34);
   font-family: "Montserrat", sans-serif;
-  transition: all 0.6s;
+  font-size: 0.6rem;
+  border-radius: 10px;
+  border: none;
+  margin: 2rem 4rem 4rem 4rem;
+  background-color: #182b49;
+  color: #e5e9f2;
+  box-shadow: -5px -5px 10px rgba(229, 233, 242, 0.1), 5px 5px 10px rgba(7, 7, 7, 0.3);
+  transition: all 0.5s;
 }
 footer #footer-button:hover {
-  font-size: 0.62rem;
-  color: rgb(34, 34, 34);
-  background-color: rgb(247, 247, 247);
-  box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.35);
-  transition: all 0.6s;
+  translate: 0px -1.5px 0px;
+  transition: all 0.3s;
 }
-footer #footer-button:active {
-  box-shadow: 0px 0px 0px;
-  transition: all 0.1s;
+footer #footer-button:active, footer #footer-button:visited {
+  border: none;
+  box-shadow: -5px -5px 10px rgba(229, 233, 242, 0.1), 5px 5px 10px rgba(7, 7, 7, 0.3), inset -5px -5px 10px rgba(229, 233, 242, 0.1), inset 5px 5px 10px rgba(7, 7, 7, 0.3);
+  transition: all 0s;
 }
 footer #copyright {
   width: 100%;
@@ -182,7 +186,7 @@ footer #copyright {
   display: flex;
   justify-content: flex-start;
   opacity: 0.6;
-  border-top: solid thin rgb(207, 114, 114);
+  border-top: solid thin #ef402f;
 }
 footer #copyright > p {
   font-size: 0.5rem;

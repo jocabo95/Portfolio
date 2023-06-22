@@ -37,3 +37,4 @@ window.addEventListener("scroll", ()=>{
         footerText.classList.remove("footer-text-colored");
     }
 })
+

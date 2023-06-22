@@ -1,5 +1,5 @@
-$background: rgb(34, 34, 34);
-$details: rgb(207, 114, 114);
+$background: rgb(24, 43, 73);
+$details: #ef402f;
 $background-text: rgb(247, 247, 247);
 
 /*navbar-expand-{-sm|-md|-lg|-xl}*/
@@ -24,11 +24,17 @@ main {
     height: 100vh;
     background-color: $background-text;
 
+    padding-top: calc(5rem + 80px);
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 2rem;
+
+    @media (max-width: $toggle-change){
+        padding-top: 0;
+        justify-content: center;
+    }
 
     h2 {
         font-family: 'Playfair Display', serif;
@@ -39,10 +45,15 @@ main {
     
     .icon-container{
         height: 3rem;
+        padding: 2rem;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: min(10vw, 3rem);
+        box-shadow: -10px -10px 15px rgba(255, 255, 255, 1), 10px 10px 15px rgba(220, 220, 220);
+        
+        border-radius: 20px;
+        transition: all 1s;
     }
 
     a{
@@ -56,7 +67,7 @@ main {
     
 
     a:hover{
-        border-bottom: solid thin $details;
+        border-bottom: solid thin $background;
 
         i{
             translate: 0px -5px 0px;
@@ -65,11 +76,14 @@ main {
     }
 
     a:active {
-        border-bottom: solid thin $background;
 
         i {
             translate: 0px -3px 0px;
             transition: all 0s;
         }
     }
+}
+
+#on{
+    box-shadow: inset -10px 15px rgba(255, 255, 255, 1), 10px 10px 15px rgba(220, 220, 220);
 }

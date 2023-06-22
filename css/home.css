@@ -67,7 +67,7 @@ main {
   /*necesary. otherwise text appears with lower opaccity*/
   position: relative;
   z-index: 2;
-  color: rgb(247, 247, 247);
+  color: rgb(237, 237, 237);
   text-shadow: -3px 3px 10px rgb(0, 0, 0);
 }
 #hero-text #main-title {
@@ -84,23 +84,25 @@ main {
 #servicios {
   width: 100%;
   height: auto;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  min-height: 100vh;
+  padding-bottom: 5rem;
   /*centers h3 and content*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(237, 237, 237);
   color: rgb(34, 34, 34);
   /*small screens should have services as list*/
-  /*big screens should have services as table*/
+  /*big screens should have services as grid*/
   /*refers to each service card*/
 }
 #servicios h2 {
   font-family: "Playfair Display", serif;
   font-size: 3rem;
   text-shadow: -5px 5px 10px rgba(34, 34, 34, 0.2);
+  margin-top: 5rem;
+  margin-bottom: auto;
 }
 @media (max-width: 576px) {
   #servicios #container-servicios {
@@ -118,11 +120,13 @@ main {
 }
 @media (min-width: 576px) {
   #servicios #container-servicios {
-    max-width: min(60vw, 40rem);
+    max-width: max(60vw, 40rem);
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
     margin: 0px 10vw 0px 10vw;
   }
   #servicios h2 {
@@ -130,47 +134,41 @@ main {
   }
 }
 #servicios .card-servicios {
-  width: 100%;
-  height: auto;
-  padding-top: 0rem;
+  width: 90%;
+  height: 100%;
+  padding: 1rem;
   /*center each card content*/
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   /*card style*/
-  border: solid thin rgba(34, 34, 34, 0.2);
-  border-radius: 0px 0px 5px 5px;
-  box-shadow: 0px 5px 10px 2px rgba(32, 32, 32, 0.2);
-  transition: all 0.2s; /*helps .car-servicios:hover when "lowering card"*/
+  border-radius: 20px;
+  box-shadow: -10px -10px 15px rgb(255, 255, 255), 10px 10px 15px rgb(220, 220, 220);
 }
 #servicios .card-servicios .card-tag {
-  width: 80%;
-  height: auto;
-  padding: 0.5rem 1rem 1rem 1rem;
-  background-color: rgba(34, 34, 34, 0.9);
-  color: rgb(247, 247, 247);
-  border-radius: 0px 0px 8px 8px;
+  width: 100%;
+  min-height: min(6rem, 100vh);
+  padding: 1rem;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  box-shadow: inset -10px -10px 15px rgb(255, 255, 255), inset 10px 10px 15px rgb(220, 220, 220);
+  color: rgb(34, 34, 34);
+  border-radius: 10px;
   transition: all 0.2s;
 }
 #servicios .card-servicios h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 1rem;
-  margin: 0.5rem 0px 0rem 0px;
+  text-shadow: -5px 5px 10px rgba(34, 34, 34, 0.2);
+  margin: 0;
 }
 #servicios .card-servicios .descripcion-servicio {
   font-size: 1rem;
-  margin: 0.5rem 1rem 1rem 1rem;
-}
-#servicios .card-servicios:hover {
-  /*card style*/
-  transform: translateY(-5px);
-  box-shadow: 0px 10px 20px rgba(32, 32, 32, 0.3);
-  transition: all 0.2s;
-}
-#servicios .card-servicios:hover .card-tag {
-  background-color: rgb(34, 34, 34);
-  box-shadow: 0px 5px 10px rgba(32, 32, 32, 0.3);
-  transition: all 0.2s;
+  margin-top: 1rem;
 }/*# sourceMappingURL=home.css.map */
