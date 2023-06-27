@@ -49,9 +49,22 @@ main {
   justify-content: flex-start;
   /*card style*/
   padding: 1rem;
+  padding-top: 1.5rem;
   border-radius: 20px;
   box-shadow: -10px -10px 15px rgb(255, 255, 255), 10px 10px 15px rgb(220, 220, 220);
   border: solid thin purple;
+}
+#projects #library-container .img-container {
+  width: 90%;
+  height: min(70vh, 300px);
+  border-radius: 10px;
+  border: solid green thin;
+}
+#projects #library-container .img-container img {
+  position: relative;
+  height: inherit;
+  border-radius: 10px;
+  object-fit: contain;
 }
 @media (max-width: 576px) {
   #projects h2 {
@@ -64,18 +77,27 @@ main {
     align-items: center;
     gap: 3rem;
   }
+  #projects .project-container {
+    width: 60vw;
+  }
 }
 @media (min-width: 576px) {
   #projects h2 {
     margin-bottom: 4rem;
   }
   #projects #library-container {
-    width: 80%;
+    width: 100%;
+    min-width: 500px;
+    max-width: min(800px, 80%);
     display: grid;
     grid-template-columns: 50% 50%;
     grid-auto-rows: auto;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+  }
+  #projects .project-container {
+    width: 100%;
+    max-width: 400px;
   }
 }/*# sourceMappingURL=projects.css.map */

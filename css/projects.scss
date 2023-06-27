@@ -44,10 +44,10 @@ main {
         height: auto;
         border: solid red;
         
-        // SAME AS HOME .card-servicios
+        // BASED IN HOME .card-servicios
         .project-container {
-
-            // center project card
+            // width stipulated in media querys
+            // center project card for both grid and flexbox
             margin-left: auto;
             margin-right: auto;
     
@@ -59,13 +59,29 @@ main {
     
             /*card style*/
             padding: 1rem;
+            padding-top: 1.5rem;
             border-radius: 20px;
             box-shadow: -10px -10px 15px rgba(255, 255, 255, 1), 10px 10px 15px rgba(220, 220, 220);
             border: solid thin purple;
         }
 
-        
-        
+        .img-container{
+            width: 90%;
+            height: min(70vh, 300px);
+            
+            border-radius: 10px;
+            border: solid green thin;
+
+            img{
+                position:relative;
+                height: inherit;
+
+                border-radius: 10px;
+
+                object-fit: contain;
+            }
+        }
+
     }
 
     /*small screens should have services as list
@@ -77,11 +93,15 @@ main {
 
         #library-container{
             width: 85%;
+
             display: flex;
             flex-direction: column;
             align-items: center;
-        
             gap: 3rem;
+        }
+
+        .project-container{
+            width: 60vw;
         }
 
     }
@@ -94,7 +114,10 @@ main {
         }
 
         #library-container{
-            width: 80%;
+
+            width: 100%;
+            min-width: 500px;
+            max-width: min(800px, 80%); // limits width for pc and bigger vp
 
             display: grid;
             grid-template-columns: 50% 50%;
@@ -104,9 +127,14 @@ main {
 
             gap: 2rem;
         }
+
+        .project-container{
+            width: 100%;
+            max-width: 400px;
+        }
+
     }
     
-
 }
 
 // img {
