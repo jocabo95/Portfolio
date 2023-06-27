@@ -172,13 +172,18 @@ footer .holla-button {
   transition: all 0.5s;
 }
 footer #footer-button:hover {
-  translate: 0px -1.5px 0px;
+  translate: 0px -0.5px 0px;
   transition: all 0.3s;
 }
 footer #footer-button:active, footer #footer-button:visited {
+  translate: 0px 0.5px 0px;
   border: none;
   box-shadow: -5px -5px 10px rgba(229, 233, 242, 0.1), 5px 5px 10px rgba(7, 7, 7, 0.3), inset -5px -5px 10px rgba(229, 233, 242, 0.1), inset 5px 5px 10px rgba(7, 7, 7, 0.3);
   transition: all 0s;
+}
+footer a, footer a:hover, footer a:active {
+  color: #e5e9f2;
+  text-decoration: none;
 }
 footer #copyright {
   width: 100%;

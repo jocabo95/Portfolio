@@ -60,8 +60,4 @@ main {
 #contact a:active i {
   translate: 0px -3px 0px;
   transition: all 0s;
-}
-
-#on {
-  box-shadow: inset -10px 15px rgb(255, 255, 255), 10px 10px 15px rgb(220, 220, 220);
 }/*# sourceMappingURL=contact.css.map */

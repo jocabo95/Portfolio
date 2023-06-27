@@ -221,14 +221,20 @@ footer {
     }
 
     #footer-button:hover{
-        translate: 0px -1.5px 0px;
+        translate: 0px -0.5px 0px;
         transition: all 0.3s;
     }
 
     #footer-button:active, #footer-button:visited {
+        translate: 0px 0.5px 0px;
         border: none;
         box-shadow: -5px -5px 10px rgb(229, 233, 242, 0.1), 5px 5px 10px rgb(7, 7, 7, 0.3), inset -5px -5px 10px rgb(229, 233, 242, 0.1), inset 5px 5px 10px rgb(7, 7, 7, 0.3);
         transition: all 0s;
+    }
+
+    a, a:hover, a:active{
+        color: $background-text;
+        text-decoration: none;
     }
 
     #copyright {

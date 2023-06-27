@@ -1,1 +1,81 @@
-/*# sourceMappingURL=projects.css.map */
+/*navbar-expand-{-sm|-md|-lg|-xl}*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: rgb(34, 34, 34);
+}
+
+main {
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
+
+#projects {
+  height: auto;
+  min-height: 100vh;
+  background-color: rgb(247, 247, 247);
+  padding-top: calc(5rem + 80px);
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  /*small screens should have services as list
+      MUST BE SAME AS HOME #container-servicios*/
+  /*big screens should have services as grid
+      MUST BE SAME AS HOME #container-servicios*/
+}
+#projects h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  text-shadow: -5px 5px 10px rgba(34, 34, 34, 0.2);
+}
+#projects #library-container {
+  height: auto;
+  border: solid red;
+}
+#projects #library-container .project-container {
+  margin-left: auto;
+  margin-right: auto;
+  /*center each card content*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /*card style*/
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: -10px -10px 15px rgb(255, 255, 255), 10px 10px 15px rgb(220, 220, 220);
+  border: solid thin purple;
+}
+@media (max-width: 576px) {
+  #projects h2 {
+    margin-bottom: 3rem;
+  }
+  #projects #library-container {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+@media (min-width: 576px) {
+  #projects h2 {
+    margin-bottom: 4rem;
+  }
+  #projects #library-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}/*# sourceMappingURL=projects.css.map */

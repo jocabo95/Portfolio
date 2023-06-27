@@ -172,6 +172,10 @@ main {
         height: 100%;
         padding: 1rem;
 
+        // center each card in its "grid box"
+        margin-left: auto;
+        margin-right: auto;
+
         /*center each card content*/
         display: flex;
         flex-direction: column;
