@@ -67,7 +67,7 @@ main {
   /*necesary. otherwise text appears with lower opaccity*/
   position: relative;
   z-index: 2;
-  color: rgb(237, 237, 237);
+  color: #e5e9f2;
   text-shadow: -3px 3px 10px rgb(0, 0, 0);
 }
 #hero-text #main-title {
@@ -91,8 +91,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(237, 237, 237);
-  color: rgb(34, 34, 34);
+  background-color: #e5e9f2;
+  color: #182b49;
   /*small screens should have services as list*/
   /*big screens should have services as grid*/
   /*refers to each service card*/
@@ -159,7 +159,7 @@ main {
   justify-content: flex-start;
   gap: 0.5rem;
   box-shadow: inset -10px -10px 15px rgb(255, 255, 255), inset 10px 10px 15px rgb(220, 220, 220);
-  color: rgb(34, 34, 34);
+  color: #182b49;
   border-radius: 10px;
   transition: all 0.2s;
 }

@@ -6,7 +6,7 @@
   font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 16px;
-  color: rgb(34, 34, 34);
+  color: #182b49;
 }
 
 main {
@@ -18,7 +18,7 @@ main {
 #projects {
   height: auto;
   min-height: 100vh;
-  background-color: rgb(247, 247, 247);
+  background-color: #e5e9f2;
   padding-top: calc(5rem + 80px);
   padding-bottom: 5rem;
   display: flex;
@@ -38,18 +38,40 @@ main {
 #projects #library-container {
   height: auto;
 }
+#projects #library-container a {
+  transition: all 0.3s;
+}
+#projects #library-container a:hover {
+  transition: all 0.3s;
+  translate: 0px -3px 0px;
+}
+#projects #library-container a:hover .project-container {
+  transition: all 0.3s;
+  box-shadow: -10px -10px 20px rgb(255, 255, 255), 10px 10px 20px rgba(115, 115, 115, 0.7);
+}
+#projects #library-container a:active {
+  transition: all 0.5s;
+  translate: 0px 3px 0px;
+}
+#projects #library-container a:active .project-container {
+  transition: all 0.3s;
+  box-shadow: none;
+}
 #projects #library-container .project-container {
+  transition: all 0.3s;
   margin-left: auto;
   margin-right: auto;
   /*center each card content*/
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: flex-start;
   /*card style*/
-  padding: 1.5rem;
+  padding-bottom: 0;
   border-radius: 20px;
-  box-shadow: -10px -10px 15px rgb(255, 255, 255), 10px 10px 15px rgb(220, 220, 220);
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.8), 10px 10px 15px rgba(116, 115, 115, 0.5);
+  background-color: #182b49;
+  color: #e5e9f2;
 }
 #projects #library-container .img-container {
   width: 100%;
@@ -59,20 +81,23 @@ main {
 #projects #library-container .img-container img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 10px 10px 0px 0px;
   object-fit: fill;
   object-position: top;
-  aspect-ratio: 1/1.3;
+  aspect-ratio: 1/1.1;
 }
 #projects #library-container h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 1rem;
-  padding-top: 0.5rem;
+  padding: 0.5rem;
+  margin: 0;
   text-shadow: -5px 5px 10px rgba(34, 34, 34, 0.2);
 }
 #projects #library-container p {
   font-size: 0.8rem;
+  padding-left: 0.5rem;
+  color: #e5e9f2;
 }
 @media (max-width: 576px) {
   #projects h2 {
@@ -93,6 +118,9 @@ main {
   #projects h2 {
     margin-bottom: 4rem;
   }
+  #projects h3 {
+    height: 2.5rem;
+  }
   #projects #library-container {
     width: 100%;
     min-width: 500px;
@@ -101,11 +129,12 @@ main {
     grid-template-columns: 50% 50%;
     grid-auto-rows: auto;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     gap: 2rem;
   }
   #projects .project-container {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
+    height: 100%;
   }
 }/*# sourceMappingURL=projects.css.map */
