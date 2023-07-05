@@ -12,7 +12,7 @@
 main {
   width: 100%;
   height: auto;
-  background-color: black;
+  background-color: #e5e9f2;
 }
 
 /*HOME*/
@@ -71,7 +71,8 @@ main {
   text-shadow: -3px 3px 10px rgb(0, 0, 0);
 }
 #hero-text #main-title {
-  font-family: "Playfair Display", serif;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 500;
   margin-bottom: 1rem;
 }
 #hero-text #home-text {
@@ -80,29 +81,70 @@ main {
   margin-left: 1vh;
 }
 
-/*SERVICIOS*/
-#servicios {
+/*TECH SKILLS & SERVICES*/
+#skills, #servicios {
   width: 100%;
   height: auto;
-  min-height: 100vh;
   padding-bottom: 5rem;
   /*centers h3 and content*/
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: #e5e9f2;
   color: #182b49;
-  /*small screens should have services as list*/
-  /*big screens should have services as grid*/
-  /*refers to each service card*/
 }
-#servicios h2 {
+#skills h2, #servicios h2 {
   font-family: "Playfair Display", serif;
   font-size: 3rem;
   text-shadow: -5px 5px 10px rgba(34, 34, 34, 0.2);
   margin-top: 5rem;
-  margin-bottom: auto;
+  margin-bottom: 5rem;
+}
+
+/*SKILLS*/
+#skills .container-skills {
+  height: auto;
+  width: 60%;
+  display: grid;
+  grid-auto-rows: auto;
+}
+#skills .container-skills .icon-container {
+  width: 5rem;
+  height: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: -10px -10px 15px rgb(255, 255, 255), 10px 10px 15px rgb(220, 220, 220);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#skills .container-skills .icon-container i {
+  font-size: 2.7rem;
+  object-fit: contain;
+}
+@media (max-width: 576px) {
+  #skills .container-skills {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+  }
+}
+@media (min-width: 576px) {
+  #skills .container-skills {
+    width: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 4rem;
+    row-gap: 2rem;
+  }
+}
+
+/*SERVICIOS*/
+#servicios {
+  min-height: 100vh;
+  /*small screens should have services as list*/
+  /*big screens should have services as grid*/
+  /*refers to each service card*/
 }
 @media (max-width: 576px) {
   #servicios #container-servicios {

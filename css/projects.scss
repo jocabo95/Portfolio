@@ -52,7 +52,7 @@ main {
             translate: 0px -3px 0px;
             .project-container{
                 transition: all 0.3s;
-                box-shadow: -10px -10px 20px rgba(255, 255, 255, 1), 10px 10px 20px rgb(115, 115, 115, 0.7);
+                box-shadow: -10px -10px 10px rgba(255, 255, 255, 1), 10px 10px 20px rgb(115, 115, 115, 0.7);
             }
         }
 
@@ -108,6 +108,7 @@ main {
         }
 
         h3{
+            // height: 3rem;
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
             font-size: 1rem;
@@ -154,7 +155,7 @@ main {
         }
 
         h3{
-            height: 2.5rem;
+            height: 3rem;
         }
 
         #library-container{

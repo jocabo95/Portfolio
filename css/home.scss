@@ -20,7 +20,7 @@ $pc-viewport: 1024px;
 main {
     width: 100%;
     height: auto;
-    background-color: black;
+    background-color: $background-text;
 }
 
 /*HOME*/
@@ -91,7 +91,9 @@ main {
     text-shadow: -3px 3px 10px rgb(0, 0, 0);
 
     #main-title{
-        font-family: 'Playfair Display', serif;
+        // font-family: 'Playfair Display', serif;
+        font-family: 'Exo 2', sans-serif;
+        font-weight: 500;
         margin-bottom: 1rem;
     }
 
@@ -103,29 +105,86 @@ main {
 
 }
 
-/*SERVICIOS*/
-#servicios{
+/*TECH SKILLS & SERVICES*/
+#skills, #servicios{
     width: 100%;
     height: auto;
-    min-height: 100vh;
     padding-bottom: 5rem; // same as h2 top margin
-    
+
     /*centers h3 and content*/
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 
     background-color: $background-text;
     color: $background;
 
-    h2{
+    h2 {
         font-family: 'Playfair Display', serif;
         font-size: 3rem;
         text-shadow: -5px 5px 10px rgb(34, 34, 34, 0.2);
         margin-top: 5rem;
-        margin-bottom: auto;
+        margin-bottom: 5rem;
     }
+}
+
+/*SKILLS*/
+#skills{
+    .container-skills{
+        height: auto;
+        width: 60%;
+    
+        display: grid;
+        grid-auto-rows: auto;
+
+        .icon-container{
+            width: 5rem;
+            height: 5rem;
+            margin-left: auto;// center container in grid box
+            margin-right: auto;
+            padding: 1rem;
+
+            border-radius: 10px;
+            box-shadow: -10px -10px 15px rgba(255, 255, 255, 1), 10px 10px 15px rgba(220, 220, 220);
+
+            // center icons in their containers
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            i{
+                font-size: 2.7rem;
+                object-fit: contain;
+            }
+        }
+    }
+
+    @media (max-width: $toggle-change) {
+        .container-skills{
+            
+            grid-template-columns: 1fr 1fr;
+            row-gap: 2rem;
+        }
+
+       
+
+    }
+
+    @media (min-width: $toggle-change) {
+        .container-skills{
+            width: auto;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 4rem;
+            row-gap: 2rem;
+        }
+
+    }
+}
+
+/*SERVICIOS*/
+#servicios{
+
+    min-height: 100vh;
 
     /*small screens should have services as list*/
     @media (max-width: $toggle-change) {

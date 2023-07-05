@@ -47,7 +47,7 @@ main {
 }
 #projects #library-container a:hover .project-container {
   transition: all 0.3s;
-  box-shadow: -10px -10px 20px rgb(255, 255, 255), 10px 10px 20px rgba(115, 115, 115, 0.7);
+  box-shadow: -10px -10px 10px rgb(255, 255, 255), 10px 10px 20px rgba(115, 115, 115, 0.7);
 }
 #projects #library-container a:active {
   transition: all 0.5s;
@@ -119,7 +119,7 @@ main {
     margin-bottom: 4rem;
   }
   #projects h3 {
-    height: 2.5rem;
+    height: 3rem;
   }
   #projects #library-container {
     width: 100%;
