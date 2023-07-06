@@ -12,47 +12,48 @@
 main {
   width: 100%;
   height: auto;
-  background-color: #e5e9f2;
+  background-color: #F2F2F2;
 }
 
 /*HOME*/
 #home {
   height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background-color: black;
+  background-color: #F2F2F2;
 }
 
 #home-img {
-  /*container that only has bg image and reduced opacity.
-   works with #home bg color to increase readability*/
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0.9;
-  background-image: url(/images/heroimg.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  width: 95vw;
+  border: solid blue;
 }
 
 /*query for  hero-text in small vp*/
 @media (max-width: 576px) {
-  #hero-text {
-    margin-left: calc(50px + 0.25rem);
+  img {
+    width: 150vw;
   }
   #main-title {
-    font-size: max(7vh, 3.5rem);
+    font-size: max(6vh, 3rem);
+    margin-left: 7vw;
   }
   #home-text {
-    font-size: max(4vh, 1.5rem);
+    font-size: max(3vh, 1.2rem);
+    margin-left: 9vw;
   }
 }
 /*query for  hero-text in big vp*/
 @media (min-width: 576px) {
+  img {
+    width: 100vw;
+  }
   #hero-text {
     margin-left: 15%;
   }
@@ -67,7 +68,7 @@ main {
   /*necesary. otherwise text appears with lower opaccity*/
   position: relative;
   z-index: 2;
-  color: #e5e9f2;
+  color: white;
   text-shadow: -3px 3px 10px rgb(0, 0, 0);
 }
 #hero-text #main-title {
@@ -77,8 +78,7 @@ main {
 }
 #hero-text #home-text {
   font-family: "Montserrat", sans-serif;
-  font-weight: 200;
-  margin-left: 1vh;
+  font-weight: bold;
 }
 
 /*TECH SKILLS & SERVICES*/
@@ -90,8 +90,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #e5e9f2;
-  color: #182b49;
+  background-color: #F2F2F2;
+  color: #333333;
 }
 #skills h2, #servicios h2 {
   font-family: "Playfair Display", serif;
@@ -201,7 +201,7 @@ main {
   justify-content: flex-start;
   gap: 0.5rem;
   box-shadow: inset -10px -10px 15px rgb(255, 255, 255), inset 10px 10px 15px rgb(220, 220, 220);
-  color: #182b49;
+  color: #F22929;
   border-radius: 10px;
   transition: all 0.2s;
 }

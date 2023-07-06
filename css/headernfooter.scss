@@ -2,9 +2,16 @@
 // $details: rgb(207, 114, 114);
 // $background-text: rgb(247, 247, 247);
 
-$background: #182b49;
+
+$background: rgb(242, 41, 41);
+$background-light: #E74753;
 $details: #ef402f;
-$background-text: #e5e9f2;
+$text-regular: #333333;
+// #333333 
+// #444444
+// #525252
+// #66666 
+$background-text: #F2F2F2;
 
 /*navbar-expand-{-sm|-md|-lg|-xl}*/
 $toggle-change: 576px;
@@ -15,12 +22,13 @@ $toggle-change: 576px;
 nav{
     
     /*if height changes, .navbar my-0 must change too*/
-    background-color: rgb(34, 34, 34, 0.2);
+    background-color: $background-text;
     box-shadow: 0px 2px 50px 0px rgb(34, 34, 34, 0.5);
     
     /*set logos size*/
     #logo{
         width: 50px;
+        background-color: none;
     }
 
     /*set dropdown button color*/
@@ -35,7 +43,7 @@ nav{
         i{
             width: 3vw;
             height: auto;
-            color: $background-text;
+            color: $background;
         }
 
     }
@@ -60,7 +68,6 @@ nav{
         font-family: 'Montserrat', sans-serif;
         background-color: none;
         text-align: center;
-        border-top: solid thin $details;
         border-bottom: solid thin $details;
 
         @media (min-width: $toggle-change){
@@ -72,7 +79,7 @@ nav{
         /*set dropwdown items*/
         .nav-item{
             border-bottom: solid 1px $background-text;
-            color: $background-text;
+            
             transition: all 0.3s;
 
             /*mquery to avoid bot border in navbar titles pc*/
@@ -84,7 +91,7 @@ nav{
             .nav-link{
                 height: auto;
                 font-size: 1rem;
-                color: $background-text;
+                color: $background-light;
             }
         }
 
@@ -136,18 +143,18 @@ nav{
 
 #navBar{
     //makes navbar color transition
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
 
 .navScroll{
     //class added to navbar when scroll event is activated in js
-    background-color: $background;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    background-color: #f4f4f4;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 }
 
 nav:hover{
-    background-color: $background;
-    transition: all 0.5s;
+    background-color: #f4f4f4;
+    transition: all 0.2s;
 }
 
 /*FOOTER - RESPONSIVE*/
@@ -158,13 +165,15 @@ footer, #footer-text-container{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    
 }
 
 footer {
     width: 100%;
     padding: 0rem 2rem 0rem 2rem;
-    background-color: $background;
     color: $background-text;
+    background-color: $background-light;
 
     /*query for text size small vp*/
     @media (max-width: $toggle-change){
@@ -200,7 +209,7 @@ footer {
 
     // class for when bottom of page is reached
     .footer-text-colored{
-        color: $details;
+        color: #4682B4;
         transition: all 1.5s;
     }
 

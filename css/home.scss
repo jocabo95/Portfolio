@@ -1,6 +1,8 @@
-$background: #182b49;
+$background: #F22929;
+$background-light: #E74753;
 $details: #ef402f;
-$background-text: #e5e9f2;
+$text-regular: #333333;
+$background-text: #F2F2F2;
 
 /*navbar-expand-{-sm|-md|-lg|-xl}*/
 $toggle-change: 576px;
@@ -21,53 +23,57 @@ main {
     width: 100%;
     height: auto;
     background-color: $background-text;
+    
 }
 
 /*HOME*/
 #home{
     height: 100vh;
-    
+    width: 100%;
 
     display: flex; //ensures #hero-text is centered
     align-items: center;
     justify-content: flex-start;
 
-    background-color: black; //sets background color
+    background-color: $background-text; //sets background color
 }
 
 #home-img{
-    /*container that only has bg image and reduced opacity.
-     works with #home bg color to increase readability*/
+    // div with img
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    
-    opacity: 0.9;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
 
-    background-image: url(/images/heroimg.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center; // ensures img center is always in screen center
+    width: 95vw;
+    border: solid blue;
+    
 }
 
 /*query for  hero-text in small vp*/
 @media (max-width: $toggle-change) {
-    #hero-text {
-        margin-left: calc(50px + 0.25rem);
+    img {
+        width: 150vw;
     }
 
     #main-title {
-        font-size: max(7vh,3.5rem);
+        font-size: max(6vh,3rem);
+        margin-left: 7vw;
     }
     #home-text {
-        font-size: max(4vh, 1.5rem);
+        font-size: max(3vh, 1.2rem);
+        margin-left: 9vw;
     }
 }
 
 /*query for  hero-text in big vp*/
 @media (min-width: $toggle-change) {
+    
+    img{
+        width: 100vw;
+    }
+
     #hero-text {
         margin-left: 15%;
     }
@@ -87,7 +93,7 @@ main {
     position: relative;
     z-index: 2;
 
-    color: $background-text;
+    color: white;
     text-shadow: -3px 3px 10px rgb(0, 0, 0);
 
     #main-title{
@@ -99,8 +105,7 @@ main {
 
     #home-text{
         font-family: 'Montserrat', sans-serif;
-        font-weight: 200;
-        margin-left: 1vh; // makes text look aligned with title
+        font-weight: bold;
     }
 
 }
@@ -117,7 +122,7 @@ main {
     align-items: center;
 
     background-color: $background-text;
-    color: $background;
+    color: $text-regular;
 
     h2 {
         font-family: 'Playfair Display', serif;
