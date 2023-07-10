@@ -31,6 +31,8 @@ main {
     height: 100vh;
     width: 100%;
 
+    padding: 0;
+
     display: flex; //ensures #hero-text is centered
     align-items: center;
     justify-content: flex-start;
@@ -40,46 +42,53 @@ main {
 
 #home-img{
     // div with img
-    position: absolute;
-    top: auto;
-    bottom: auto;
-    left: auto;
-    right: auto;
+    width: auto;
+    height: 100%;
 
-    width: 95vw;
-    border: solid blue;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /*query for  hero-text in small vp*/
 @media (max-width: $toggle-change) {
     img {
-        width: 150vw;
+        width: 100%;
     }
 
     #main-title {
-        font-size: max(6vh,3rem);
-        margin-left: 7vw;
+        font-size: max(3.2vh, 2rem);
+        margin-left: 5vw;
+        margin-bottom: 0.5rem;
+        letter-spacing: auto;
     }
+
     #home-text {
-        font-size: max(3vh, 1.2rem);
-        margin-left: 9vw;
+        font-size: max(1vh, 1rem);
+        margin-left: 12vw;
     }
 }
 
 /*query for  hero-text in big vp*/
 @media (min-width: $toggle-change) {
     
+    #home-img{
+        margin-right: 0px;
+        margin-left: auto;
+    }
+
     img{
-        width: 100vw;
+        width: 80vw;
+        max-width: 500px;
     }
 
     #hero-text {
-        margin-left: 15%;
+        margin-left: 5%;
     }
 
     #main-title {
         font-size: max(10vh, 3.5rem);
+        margin-bottom: 1rem;
     }
 
     #home-text {
@@ -90,7 +99,16 @@ main {
 #hero-text{
 
     /*necesary. otherwise text appears with lower opaccity*/
-    position: relative;
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    left: 0;
+    right: auto;
+
+    width: auto;
+    max-width: 50%;
+    border: solid thin blue;
+
     z-index: 2;
 
     color: white;
@@ -100,12 +118,10 @@ main {
         // font-family: 'Playfair Display', serif;
         font-family: 'Exo 2', sans-serif;
         font-weight: 500;
-        margin-bottom: 1rem;
     }
 
     #home-text{
         font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
     }
 
 }
