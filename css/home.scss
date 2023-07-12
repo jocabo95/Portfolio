@@ -2,7 +2,7 @@ $background: #F22929;
 $background-light: #E74753;
 $details: #ef402f;
 $text-regular: #333333;
-$background-text: #F2F2F2;
+$background-text: #FFFFFF;
 
 /*navbar-expand-{-sm|-md|-lg|-xl}*/
 $toggle-change: 576px;
@@ -38,6 +38,7 @@ main {
     justify-content: flex-start;
 
     background-color: $background-text; //sets background color
+    overflow: hidden;
 }
 
 #home-img{
@@ -61,11 +62,16 @@ main {
         margin-left: 5vw;
         margin-bottom: 0.5rem;
         letter-spacing: auto;
+        font-weight: 500;
     }
 
     #home-text {
         font-size: max(1vh, 1rem);
         margin-left: 12vw;
+    }
+
+    #hero-text{
+        max-width: 50%;
     }
 }
 
@@ -73,8 +79,11 @@ main {
 @media (min-width: $toggle-change) {
     
     #home-img{
+        position: relative;
+        left: 25%;
         margin-right: 0px;
         margin-left: auto;
+        
     }
 
     img{
@@ -84,15 +93,38 @@ main {
 
     #hero-text {
         margin-left: 5%;
+        max-width: 50%;
     }
 
     #main-title {
         font-size: max(10vh, 3.5rem);
         margin-bottom: 1rem;
+        font-weight: 700;
     }
 
     #home-text {
         font-size: max(6vh, 1.5rem);
+    }
+
+    //laptops
+    @media (min-width: 1000px){
+        #home-img {
+            position: relative;
+            left: 40px; //must be specified
+            margin-right: 0px;
+            margin-left: auto;
+        }
+
+        img {
+            height: 80%;
+            width: auto;
+            max-width: none;
+        }
+
+        #hero-text {
+            margin-left: 5%;
+            max-width: 40%;
+        }
     }
 }
 
@@ -106,22 +138,21 @@ main {
     right: auto;
 
     width: auto;
-    max-width: 50%;
-    border: solid thin blue;
+    
 
     z-index: 2;
 
     color: white;
-    text-shadow: -3px 3px 10px rgb(0, 0, 0);
+    text-shadow: -3px 3px 10px rgb(0, 0, 0, 0.6);
 
     #main-title{
         // font-family: 'Playfair Display', serif;
         font-family: 'Exo 2', sans-serif;
-        font-weight: 500;
     }
 
     #home-text{
         font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
     }
 
 }
