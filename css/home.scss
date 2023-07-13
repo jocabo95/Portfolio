@@ -9,6 +9,7 @@ $toggle-change: 576px;
 
 /*PC display*/
 $pc-viewport: 1024px;
+$navbar-height: 60px;
 
 *{
     margin: 0px;
@@ -28,7 +29,8 @@ main {
 
 /*HOME*/
 #home{
-    height: 100vh;
+    height: calc(100vh - $navbar-height);
+    border: solid blue;
     width: 100%;
 
     padding: 0;

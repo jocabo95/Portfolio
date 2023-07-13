@@ -15,8 +15,11 @@ $background-text: #F2F2F2;
 
 /*navbar-expand-{-sm|-md|-lg|-xl}*/
 $toggle-change: 576px;
+$navbar-height: 60px;
 
-
+body{
+    padding-top: $navbar-height;
+}
 
 /*NAVBAR - RESPONSIVE*/
 nav{
