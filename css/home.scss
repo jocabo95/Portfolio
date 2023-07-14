@@ -30,17 +30,26 @@ main {
 /*HOME*/
 #home{
     height: calc(100vh - $navbar-height);
-    border: solid blue;
     width: 100%;
 
     padding: 0;
 
     display: flex; //ensures #hero-text is centered
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 
     background-color: $background-text; //sets background color
     overflow: hidden;
+}
+
+#home-img-n-text{
+    width: 100%;
+    height: auto;
+    display: flex; //aligns name, description and img
+    align-items: center;
+    justify-content: flex-start;
+    
 }
 
 #home-img{
@@ -53,10 +62,26 @@ main {
     justify-content: center;
 }
 
+#home-btn{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+
+    border: none;
+    background-color: $background-light;
+    color: $background-text;
+}
+
 /*query for  hero-text in small vp*/
 @media (max-width: $toggle-change) {
     img {
         width: 100%;
+    }
+
+    #hero-text{
+        max-width: 50%;
+        color: white;
     }
 
     #main-title {
@@ -72,14 +97,22 @@ main {
         margin-left: 12vw;
     }
 
-    #hero-text{
-        max-width: 50%;
+    #home-btn{
+        position: absolute;
+        top: 82vh;
     }
+
 }
 
 /*query for  hero-text in big vp*/
 @media (min-width: $toggle-change) {
     
+    #hero-text {
+        margin-left: 5%;
+        max-width: 50%;
+        color: black;
+    }
+
     #home-img{
         position: relative;
         left: 25%;
@@ -93,10 +126,6 @@ main {
         max-width: 500px;
     }
 
-    #hero-text {
-        margin-left: 5%;
-        max-width: 50%;
-    }
 
     #main-title {
         font-size: max(10vh, 3.5rem);
@@ -106,6 +135,12 @@ main {
 
     #home-text {
         font-size: max(6vh, 1.5rem);
+    }
+
+    #home-btn {
+        position: absolute;
+        top: 77vh;
+        left: 5%;
     }
 
     //laptops
@@ -118,7 +153,7 @@ main {
         }
 
         img {
-            height: 80%;
+            height: 40%;
             width: auto;
             max-width: none;
         }
@@ -144,8 +179,7 @@ main {
 
     z-index: 2;
 
-    color: white;
-    text-shadow: -3px 3px 10px rgb(0, 0, 0, 0.6);
+    // text-shadow: -3px 3px 10px rgb(0, 0, 0, 0.6);
 
     #main-title{
         // font-family: 'Playfair Display', serif;
