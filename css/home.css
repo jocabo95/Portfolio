@@ -9,6 +9,14 @@
   font-size: 16px;
 }
 
+#main-title, h2, h3 {
+  font-family: "Exo 2", sans-serif;
+}
+
+#home-text, #home-btn, .descripcion-servicio, #footer-button, #copyright {
+  font-family: "Montserrat", sans-serif;
+}
+
 main {
   width: 100%;
   height: auto;
@@ -25,29 +33,10 @@ main {
   align-items: center;
   justify-content: center;
   background-color: #FFFFFF;
-  overflow: hidden;
-}
-
-#home-img-n-text {
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-#home-img {
-  width: auto;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 #home-btn {
-  font-size: 1.5rem;
   font-weight: bold;
-  padding: 1rem 2rem;
   border-radius: 30px;
   border: none;
   background-color: #E74753;
@@ -56,15 +45,31 @@ main {
 
 /*query for  hero-text in small vp*/
 @media (max-width: 576px) {
+  #pc-home-btn {
+    display: none;
+  }
+  #home-img-n-text {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
   img {
     width: 100%;
+    max-width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
   }
   #hero-text {
+    position: absolute;
+    left: 4%;
+    right: auto;
     max-width: 50%;
     color: white;
   }
   #main-title {
-    font-size: max(3.2vh, 2rem);
+    font-size: max(3.1vh, 1.9rem);
     margin-left: 5vw;
     margin-bottom: 0.5rem;
     letter-spacing: auto;
@@ -75,74 +80,56 @@ main {
     margin-left: 12vw;
   }
   #home-btn {
-    position: absolute;
-    top: 82vh;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    margin-top: 5rem;
   }
 }
 /*query for  hero-text in big vp*/
 @media (min-width: 576px) {
+  #mobile-home-btn {
+    display: none;
+  }
+  #home {
+    justify-content: center;
+  }
+  #home-img-n-text {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: "left right";
+    overflow-x: hidden;
+    align-items: center;
+  }
   #hero-text {
-    margin-left: 5%;
-    max-width: 50%;
+    position: relative;
+    width: 100%;
+    margin-left: 1rem;
+    grid-area: left;
     color: black;
   }
-  #home-img {
-    position: relative;
-    left: 25%;
-    margin-right: 0px;
-    margin-left: auto;
-  }
   img {
-    width: 80vw;
-    max-width: 500px;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    grid-area: right;
   }
   #main-title {
-    font-size: max(10vh, 3.5rem);
+    font-size: max(7vh, 3rem);
     margin-bottom: 1rem;
     font-weight: 700;
   }
   #home-text {
-    font-size: max(6vh, 1.5rem);
+    font-size: max(4vh, 1.2rem);
   }
   #home-btn {
-    position: absolute;
-    top: 77vh;
-    left: 5%;
-  }
-}
-@media (min-width: 576px) and (min-width: 1000px) {
-  #home-img {
-    position: relative;
-    left: 40px;
-    margin-right: 0px;
-    margin-left: auto;
-  }
-  img {
-    height: 40%;
-    width: auto;
-    max-width: none;
-  }
-  #hero-text {
-    margin-left: 5%;
-    max-width: 40%;
+    margin-top: 2rem;
   }
 }
 #hero-text {
-  /*necesary. otherwise text appears with lower opaccity*/
-  position: absolute;
-  top: auto;
-  bottom: auto;
-  left: 0;
-  right: auto;
   width: auto;
   z-index: 2;
-}
-#hero-text #main-title {
-  font-family: "Exo 2", sans-serif;
-}
-#hero-text #home-text {
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
 }
 
 /*TECH SKILLS & SERVICES*/
@@ -158,7 +145,6 @@ main {
   color: #333333;
 }
 #skills h2, #servicios h2 {
-  font-family: "Playfair Display", serif;
   font-size: 3rem;
   text-shadow: -5px 5px 10px rgba(34, 34, 34, 0.2);
   margin-top: 5rem;
@@ -270,7 +256,6 @@ main {
   transition: all 0.2s;
 }
 #servicios .card-servicios h3 {
-  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 1rem;
   text-shadow: -5px 5px 10px rgba(34, 34, 34, 0.2);
@@ -279,4 +264,9 @@ main {
 #servicios .card-servicios .descripcion-servicio {
   font-size: 1rem;
   margin-top: 1rem;
+  font-weight: 400;
+}
+
+h2 {
+  color: #F22929;
 }/*# sourceMappingURL=home.css.map */

@@ -17,6 +17,7 @@ nav {
 nav #logo {
   width: 50px;
   background-color: none;
+  border: none;
 }
 nav .navbar-toggler {
   /*.nav-toggler is button container*/
