@@ -57,6 +57,8 @@ main {
     border: none;
     background-color: $background-light;
     color: $background-text;
+
+    transition: all 0.3s;
 }
 
 /*query for  hero-text in small vp*/
@@ -117,6 +119,7 @@ main {
     #mobile-home-btn{
         display: none;
     }
+
     #home{
         justify-content: center;
     }
@@ -130,6 +133,7 @@ main {
         grid-template-areas: "left right";
         overflow-x: hidden;
         align-items: center;
+        justify-items: center;
     }
 
     #hero-text {
@@ -151,20 +155,27 @@ main {
 
 
     #main-title {
-        font-size: max(7vh, 3rem);
+        font-size: max(100%, 3rem);
         margin-bottom: 1rem;
         font-weight: 700;
     }
 
     #home-text {
-        font-size: max(4vh, 1.2rem);
+        font-size: max(3vh, 1.5rem);
     }
 
     #home-btn {
-        margin-top: 2rem;
-        // position: absolute;
-        // top: 65vh;
-        // left: 5%;
+        margin-top: 3rem;
+        height: 3.5rem;
+        width: 70%;
+
+        font-size: 1.2rem;
+        
+    }
+
+    #home-btn:hover{
+        background-color: $background;
+        translate: 0px -2px 0px;
     }
 
 }
@@ -289,7 +300,7 @@ main {
         }
 
         h2{
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
         }
     }
 

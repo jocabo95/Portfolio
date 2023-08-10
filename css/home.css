@@ -41,6 +41,7 @@ main {
   border: none;
   background-color: #E74753;
   color: #FFFFFF;
+  transition: all 0.3s;
 }
 
 /*query for  hero-text in small vp*/
@@ -101,6 +102,7 @@ main {
     grid-template-areas: "left right";
     overflow-x: hidden;
     align-items: center;
+    justify-items: center;
   }
   #hero-text {
     position: relative;
@@ -116,15 +118,22 @@ main {
     grid-area: right;
   }
   #main-title {
-    font-size: max(7vh, 3rem);
+    font-size: max(100%, 3rem);
     margin-bottom: 1rem;
     font-weight: 700;
   }
   #home-text {
-    font-size: max(4vh, 1.2rem);
+    font-size: max(3vh, 1.5rem);
   }
   #home-btn {
-    margin-top: 2rem;
+    margin-top: 3rem;
+    height: 3.5rem;
+    width: 70%;
+    font-size: 1.2rem;
+  }
+  #home-btn:hover {
+    background-color: #F22929;
+    translate: 0px -2px 0px;
   }
 }
 #hero-text {
@@ -222,7 +231,7 @@ main {
     margin: 0px 10vw 0px 10vw;
   }
   #servicios h2 {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 }
 #servicios .card-servicios {
