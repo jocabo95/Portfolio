@@ -7,10 +7,6 @@ $background: rgb(242, 41, 41);
 $background-light: #E74753;
 $details: #ef402f;
 $text-regular: #333333;
-// #333333 
-// #444444
-// #525252
-// #66666 
 $background-text: #F2F2F2;
 
 /*navbar-expand-{-sm|-md|-lg|-xl}*/
@@ -47,7 +43,7 @@ nav{
         i{
             width: 3vw;
             height: auto;
-            color: $background;
+            color: $details;
         }
 
     }
@@ -64,6 +60,7 @@ nav{
         /*select only ul tag with class me-2*/
         ul.me-2{
             margin-right: 0 !important;
+            color: $details;
         }
     }
 
@@ -95,7 +92,7 @@ nav{
             .nav-link{
                 height: auto;
                 font-size: 1rem;
-                color: $background-light;
+                color: $details;
             }
         }
 
@@ -125,16 +122,12 @@ nav{
                 text-align: center;
             }
             .nav-item:hover {
-                translate: 0px -3px 0px;
-                border-radius: 10px;
-                // border-bottom: solid thin $details;
-                box-shadow: -5px -5px 10px rgb(229, 233, 242, 0.1), 5px 5px 10px rgb(7, 7, 7, 0.3);
-                transition: all 0.3s;
+                border-bottom: solid thin $background;
+                transition: all 0s;
             }
         
             .nav-item:active {
-                translate: 0px -2px 0px;
-                box-shadow: -5px -5px 10px rgb(229, 233, 242, 0.1), 5px 5px 10px rgb(7, 7, 7, 0.3), inset -5px -5px 10px rgb(229, 233, 242, 0.1), inset 5px 5px 10px rgb(7, 7, 7, 0.3);
+                translate: 0px 2px 0px;
                 transition: all 0s;
             }
         }
@@ -177,7 +170,8 @@ footer {
     width: 100%;
     padding: 0rem 2rem 0rem 2rem;
     color: $background-text;
-    background-color: $background-light;
+    background-color: $background;
+    opacity: 0.95;
 
     /*query for text size small vp*/
     @media (max-width: $toggle-change){
@@ -203,23 +197,21 @@ footer {
     
     
     #footer-text {
+        font-size: 1.5rem;
         margin-bottom: 0rem;
         font-weight: 300;
-        font-family: 'Montserrat', sans-serif;
-
         text-align: center;
         transition: all 1.5s;
     }
 
     // class for when bottom of page is reached
     .footer-text-colored{
-        color: #4682B4;
+        color: $background-text;
         transition: all 1.5s;
     }
 
 
     .holla-button {
-        font-family: 'Montserrat', sans-serif;
         font-size: 0.6rem;
 
         border-radius: 10px;
@@ -229,19 +221,22 @@ footer {
         background-color: $background;
         color: $background-text;
 
-        box-shadow: -5px -5px 10px rgb(229, 233, 242, 0.1), 5px 5px 10px rgb(7, 7, 7, 0.3);
+        box-shadow: 0px -2px 10px rgb(7,
+            7,
+            7,
+            0.3), 0px 2px 10px rgb(7, 7, 7, 0.3);
         transition: all 0.5s;
     }
 
     #footer-button:hover{
-        translate: 0px -0.5px 0px;
+        translate: 0px -2px 0px;
+        opacity: 0.7;
         transition: all 0.3s;
     }
 
     #footer-button:active, #footer-button:visited {
         translate: 0px 0.5px 0px;
         border: none;
-        box-shadow: -5px -5px 10px rgb(229, 233, 242, 0.1), 5px 5px 10px rgb(7, 7, 7, 0.3), inset -5px -5px 10px rgb(229, 233, 242, 0.1), inset 5px 5px 10px rgb(7, 7, 7, 0.3);
         transition: all 0s;
     }
 
@@ -257,8 +252,8 @@ footer {
         display: flex;
         justify-content: flex-start;
 
-        opacity: 0.6;
-        border-top: solid thin $details;
+        opacity: 0.9;
+        border-top: solid thin $background-text;
     }
 
     #copyright > p {

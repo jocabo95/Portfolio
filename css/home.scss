@@ -20,11 +20,11 @@ $navbar-height: 60px;
     font-size: 16px;
 }
 
-#main-title, h2, h3{
+#main-title, h2, h3, #footer-text{
     font-family: 'Exo 2', sans-serif;
 }
 
-#home-text, #home-btn, .descripcion-servicio, #footer-button, #copyright{
+#home-text, #home-btn, .descripcion-servicio, #footer-button, #copyright, .holla-bu{
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -55,7 +55,8 @@ main {
     font-weight: bold;
     border-radius: 30px;
     border: none;
-    background-color: $background-light;
+    background-color: $background;
+    opacity: 0.9;
     color: $background-text;
 
     transition: all 0.3s;
@@ -174,7 +175,7 @@ main {
     }
 
     #home-btn:hover{
-        background-color: $background;
+        opacity: 1;
         translate: 0px -2px 0px;
     }
 
@@ -309,7 +310,6 @@ main {
     .card-servicios{
         width: 90%;
         height: 100%;
-        padding: 1rem;
 
         // center each card in its "grid box"
         margin-left: auto;
@@ -324,11 +324,13 @@ main {
 
         /*card style*/
         border-radius: 20px;
-        box-shadow: -10px -10px 15px rgba(255, 255, 255, 1), 10px 10px 15px rgba(220, 220, 220);
+        box-shadow: -10px -10px 15px rgba(220,
+            220,
+            220), 10px 10px 15px rgba(220, 220, 220);
 
         .card-tag{
             width: 100%;
-            min-height: min(6rem, 100vh);
+            height: 3rem;
             padding: 1rem;
             margin: 0;
 
@@ -338,10 +340,11 @@ main {
             justify-content: flex-start;
             gap: 0.5rem;
 
-            box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 1), inset 10px 10px 15px rgba(220, 220, 220);
-            color: $background;
-            border-radius: 10px;
+            // box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 1), inset 10px 10px 15px rgba(220, 220, 220);
+            color: $background-text;
+            border-radius: 20px 20px 0px 0px;
             transition: all 0.2s;
+            background-color: $background-light;
         }
 
         h3 {
@@ -353,7 +356,7 @@ main {
 
         .descripcion-servicio{
             font-size: 1rem;
-            margin-top: 1rem;
+            margin: 1rem;
             font-weight: 400;
         }
     }

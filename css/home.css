@@ -9,11 +9,11 @@
   font-size: 16px;
 }
 
-#main-title, h2, h3 {
+#main-title, h2, h3, #footer-text {
   font-family: "Exo 2", sans-serif;
 }
 
-#home-text, #home-btn, .descripcion-servicio, #footer-button, #copyright {
+#home-text, #home-btn, .descripcion-servicio, #footer-button, #copyright, .holla-bu {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -39,7 +39,8 @@ main {
   font-weight: bold;
   border-radius: 30px;
   border: none;
-  background-color: #E74753;
+  background-color: #F22929;
+  opacity: 0.9;
   color: #FFFFFF;
   transition: all 0.3s;
 }
@@ -132,7 +133,7 @@ main {
     font-size: 1.2rem;
   }
   #home-btn:hover {
-    background-color: #F22929;
+    opacity: 1;
     translate: 0px -2px 0px;
   }
 }
@@ -237,7 +238,6 @@ main {
 #servicios .card-servicios {
   width: 90%;
   height: 100%;
-  padding: 1rem;
   margin-left: auto;
   margin-right: auto;
   /*center each card content*/
@@ -247,11 +247,11 @@ main {
   justify-content: flex-start;
   /*card style*/
   border-radius: 20px;
-  box-shadow: -10px -10px 15px rgb(255, 255, 255), 10px 10px 15px rgb(220, 220, 220);
+  box-shadow: -10px -10px 15px rgb(220, 220, 220), 10px 10px 15px rgb(220, 220, 220);
 }
 #servicios .card-servicios .card-tag {
   width: 100%;
-  min-height: min(6rem, 100vh);
+  height: 3rem;
   padding: 1rem;
   margin: 0;
   display: flex;
@@ -259,10 +259,10 @@ main {
   align-items: center;
   justify-content: flex-start;
   gap: 0.5rem;
-  box-shadow: inset -10px -10px 15px rgb(255, 255, 255), inset 10px 10px 15px rgb(220, 220, 220);
-  color: #F22929;
-  border-radius: 10px;
+  color: #FFFFFF;
+  border-radius: 20px 20px 0px 0px;
   transition: all 0.2s;
+  background-color: #E74753;
 }
 #servicios .card-servicios h3 {
   font-weight: bold;
@@ -272,7 +272,7 @@ main {
 }
 #servicios .card-servicios .descripcion-servicio {
   font-size: 1rem;
-  margin-top: 1rem;
+  margin: 1rem;
   font-weight: 400;
 }
 
