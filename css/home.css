@@ -153,7 +153,7 @@ main {
   flex-direction: column;
   align-items: center;
   background-color: rgb(34, 34, 34);
-  color: #F2F2F2;
+  color: #FFFFFF;
 }
 #skills h2, #servicios h2 {
   font-size: 3rem;
@@ -202,7 +202,7 @@ main {
 
 /*SERVICIOS*/
 #servicios {
-  min-height: 100vh;
+  min-height: 60vh;
   /*small screens should have services as list*/
   /*big screens should have services as grid*/
   /*refers to each service card*/
