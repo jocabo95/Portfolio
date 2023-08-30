@@ -1,6 +1,8 @@
-$background: rgb(34, 34, 34);
+$background1: rgb(34, 34, 34);
+$background1-light: rgb(48, 48, 48);
+$background-light: #E74753;
 $details: #ef402f;
-$background-text: rgb(247, 247, 247);
+$background-text: #FFFFFF;
 
 /*navbar-expand-{-sm|-md|-lg|-xl}*/
 $toggle-change: 576px;
@@ -12,7 +14,7 @@ $toggle-change: 576px;
     font-family: 'Lato', sans-serif;
     font-weight: 600; // sets navbar titles weight
     font-size: 16px;
-    color: $background;
+    color: $background1;
 }
 
 main {
@@ -24,31 +26,39 @@ main {
 #about {
     height: auto;
     min-height: 100vh;
-    background-color: $background-text;
+    background-color: $background1;
 
-    padding-top: calc(5rem + 80px); //same as all pages. 80px account for navbar
-    padding-bottom: 5rem;
+    padding-top:3rem; //same as all pages. 80px account for navbar
+    padding-bottom: 4rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+
     gap: 2rem;
 
     h2 {
+        width: 80%;
+        text-align: center;
         font-family: 'Playfair Display', serif;
         font-size: 3rem;
-        text-shadow: -5px 5px 10px rgb(34, 34, 34, 0.2);
+        color: $background-text;
+        border-bottom: solid thin $background-light;
+        padding-bottom: 0.5rem;
     }
 
     #info-container{
         width: 80%;
+        background-color: $background1;
     }
 
     p{
-        padding: 2rem;
+        padding: 1.5rem;
         border-radius: 20px;
         font-weight: bold;
-        box-shadow: -10px -10px 15px 1px rgba(255, 255, 255, 1), 10px 10px 15px rgba(220, 220, 220);
+        color: $background-text;
+        background-color: $background1-light;
+        opacity: 0.7;
     }
 
 }

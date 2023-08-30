@@ -16,8 +16,8 @@ main {
 
 #contact {
   height: 100vh;
-  background-color: rgb(247, 247, 247);
-  padding-top: calc(5rem + 80px);
+  background-color: rgb(34, 34, 34);
+  padding-top: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,26 +32,31 @@ main {
 #contact h2 {
   font-family: "Playfair Display", serif;
   font-size: 3rem;
-  text-shadow: -5px 5px 10px rgba(34, 34, 34, 0.2);
+  color: #FFFFFF;
+  width: 80%;
+  border-bottom: solid thin #E74753;
+  padding-bottom: 0.5rem;
+  text-align: center;
 }
 #contact .icon-container {
   height: 3rem;
   padding: 2rem;
+  margin-top: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: min(10vw, 3rem);
-  box-shadow: -10px -10px 15px rgb(255, 255, 255), 10px 10px 15px rgb(220, 220, 220);
   border-radius: 20px;
   transition: all 1s;
+  background-color: rgb(48, 48, 48);
 }
 #contact a i {
-  color: rgb(24, 43, 73);
+  color: #FFFFFF;
   font-size: 2rem;
   transition: all 0.3s;
 }
 #contact a:hover {
-  border-bottom: solid thin rgb(24, 43, 73);
+  border-bottom: solid thin #E74753;
 }
 #contact a:hover i {
   translate: 0px -5px 0px;

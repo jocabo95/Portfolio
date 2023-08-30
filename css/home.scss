@@ -1,8 +1,13 @@
-$background: #F22929;
+$background1: rgb(34, 34, 34);
 $background-light: #E74753;
 $details: #ef402f;
-$text-regular: #333333;
 $background-text: #FFFFFF;
+
+// $background: #F22929;
+// $background-light: #E74753;
+// $details: #F22929;
+// $text-regular: #333333;
+// $background-text: #FFFFFF;
 
 /*navbar-expand-{-sm|-md|-lg|-xl}*/
 $toggle-change: 576px;
@@ -31,7 +36,6 @@ $navbar-height: 60px;
 main {
     width: 100%;
     height: auto;
-    background-color: $background-text;
     
 }
 
@@ -47,7 +51,7 @@ main {
     align-items: center;
     justify-content: center;
         
-    background-color: $background-text; //sets background color
+    background-color: $background1; //sets background color
 }
 
 
@@ -55,9 +59,9 @@ main {
     font-weight: bold;
     border-radius: 30px;
     border: none;
-    background-color: $background;
+    background-color: $background-text;
     opacity: 0.9;
-    color: $background-text;
+    color: $background1;
 
     transition: all 0.3s;
 }
@@ -144,7 +148,9 @@ main {
 
         grid-area: left;
 
-        color: black;
+        #main-title{
+            color: $background-light;
+        }
     }
 
     img{
@@ -198,7 +204,7 @@ main {
     flex-direction: column;
     align-items: center;
 
-    background-color: $background-text;
+    background-color: $background1;
     color: $text-regular;
 
     h2 {
@@ -224,9 +230,9 @@ main {
             margin-left: auto;// center container in grid box
             margin-right: auto;
             padding: 1rem;
+            background-color: $background1;
 
             border-radius: 10px;
-            box-shadow: -10px -10px 15px rgba(255, 255, 255, 1), 10px 10px 15px rgba(220, 220, 220);
 
             // center icons in their containers
             display: flex;
@@ -324,10 +330,8 @@ main {
 
         /*card style*/
         border-radius: 20px;
-        box-shadow: -10px -10px 15px rgba(220,
-            220,
-            220), 10px 10px 15px rgba(220, 220, 220);
-
+        // border: solid thin $text-regular;
+        
         .card-tag{
             width: 100%;
             height: 3rem;
@@ -342,9 +346,9 @@ main {
 
             // box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 1), inset 10px 10px 15px rgba(220, 220, 220);
             color: $background-text;
-            border-radius: 20px 20px 0px 0px;
-            transition: all 0.2s;
+            border-radius: 20px;
             background-color: $background-light;
+            opacity: 0.8;
         }
 
         h3 {
@@ -364,7 +368,7 @@ main {
 }
 
 h2{
-    color: $background;
+    color: $background-text;
 }
 
 

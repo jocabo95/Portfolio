@@ -18,25 +18,32 @@ main {
 #about {
   height: auto;
   min-height: 100vh;
-  background-color: rgb(247, 247, 247);
-  padding-top: calc(5rem + 80px);
-  padding-bottom: 5rem;
+  background-color: rgb(34, 34, 34);
+  padding-top: 3rem;
+  padding-bottom: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
 }
 #about h2 {
+  width: 80%;
+  text-align: center;
   font-family: "Playfair Display", serif;
   font-size: 3rem;
-  text-shadow: -5px 5px 10px rgba(34, 34, 34, 0.2);
+  color: #FFFFFF;
+  border-bottom: solid thin #E74753;
+  padding-bottom: 0.5rem;
 }
 #about #info-container {
   width: 80%;
+  background-color: rgb(34, 34, 34);
 }
 #about p {
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 20px;
   font-weight: bold;
-  box-shadow: -10px -10px 15px 1px rgb(255, 255, 255), 10px 10px 15px rgb(220, 220, 220);
+  color: #FFFFFF;
+  background-color: rgb(48, 48, 48);
+  opacity: 0.7;
 }/*# sourceMappingURL=about.css.map */

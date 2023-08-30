@@ -1,6 +1,8 @@
-$background: rgb(24, 43, 73);
+$background1: rgb(34, 34, 34);
+$background1-light: rgb(48, 48, 48);
+$background-light: #E74753;
 $details: #ef402f;
-$background-text: rgb(247, 247, 247);
+$background-text: #FFFFFF;
 
 /*navbar-expand-{-sm|-md|-lg|-xl}*/
 $toggle-change: 576px;
@@ -22,9 +24,9 @@ main {
 
 #contact{
     height: 100vh;
-    background-color: $background-text;
+    background-color: $background1;
 
-    padding-top: calc(5rem + 80px);
+    padding-top: 3rem;
 
     display: flex;
     flex-direction: column;
@@ -39,27 +41,33 @@ main {
     h2 {
         font-family: 'Playfair Display', serif;
         font-size: 3rem;
-        text-shadow: -5px 5px 10px rgb(34, 34, 34, 0.2);
+        color: $background-text;
+        width: 80%;
+        border-bottom: solid thin $background-light;
+        padding-bottom: 0.5rem;
+        text-align: center;        
     }
 
     
     .icon-container{
         height: 3rem;
         padding: 2rem;
+        margin-top: 4rem;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: min(10vw, 3rem);
-        box-shadow: -10px -10px 15px rgba(255, 255, 255, 1), 10px 10px 15px rgba(220, 220, 220);
         
         border-radius: 20px;
         transition: all 1s;
+
+        background-color: $background1-light;
     }
 
     a{
   
         i{
-            color: $background;
+            color: $background-text;
             font-size: 2rem;
             transition: all 0.3s;
         } 
@@ -67,7 +75,7 @@ main {
     
 
     a:hover{
-        border-bottom: solid thin $background;
+        border-bottom: solid thin $background-light;
 
         i{
             translate: 0px -5px 0px;
