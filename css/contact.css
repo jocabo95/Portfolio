@@ -11,7 +11,7 @@
 main {
   width: 100%;
   height: auto;
-  background-color: black;
+  background-color: rgb(34, 34, 34);
 }
 
 #contact {
@@ -50,10 +50,14 @@ main {
   transition: all 1s;
   background-color: rgb(48, 48, 48);
 }
+#contact a {
+  background-color: rgb(48, 48, 48);
+}
 #contact a i {
   color: #FFFFFF;
   font-size: 2rem;
   transition: all 0.3s;
+  background-color: rgb(48, 48, 48);
 }
 #contact a:hover {
   border-bottom: solid thin #E74753;

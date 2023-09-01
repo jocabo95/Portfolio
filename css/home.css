@@ -11,6 +11,7 @@
 
 #main-title, h2, h3, #footer-text {
   font-family: "Exo 2", sans-serif;
+  background-color: transparent;
 }
 
 #home-text, #home-btn, .descripcion-servicio, #footer-button, #copyright, .holla-bu {
@@ -20,6 +21,7 @@
 main {
   width: 100%;
   height: auto;
+  background-color: rgb(34, 34, 34);
 }
 
 /*HOME*/
@@ -79,6 +81,7 @@ main {
   #home-text {
     font-size: max(1vh, 1rem);
     margin-left: 12vw;
+    background-color: transparent;
   }
   #home-btn {
     font-size: 1.1rem;
@@ -108,6 +111,7 @@ main {
     position: relative;
     width: 100%;
     margin-left: 1rem;
+    background-color: transparent;
     grid-area: left;
   }
   #hero-text #main-title {

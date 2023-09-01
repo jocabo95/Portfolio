@@ -19,7 +19,7 @@ $toggle-change: 576px;
 main {
     width: 100%;
     height: auto;
-    background-color: black;
+    background-color: $background1;
 }
 
 #contact{
@@ -65,11 +65,12 @@ main {
     }
 
     a{
-  
+        background-color: $background1-light;
         i{
             color: $background-text;
             font-size: 2rem;
             transition: all 0.3s;
+            background-color: $background1-light;
         } 
     }
     

@@ -27,6 +27,7 @@ $navbar-height: 60px;
 
 #main-title, h2, h3, #footer-text{
     font-family: 'Exo 2', sans-serif;
+    background-color: transparent;
 }
 
 #home-text, #home-btn, .descripcion-servicio, #footer-button, #copyright, .holla-bu{
@@ -36,6 +37,7 @@ $navbar-height: 60px;
 main {
     width: 100%;
     height: auto;
+    background-color: $background1;
     
 }
 
@@ -109,6 +111,7 @@ main {
     #home-text {
         font-size: max(1vh, 1rem);
         margin-left: 12vw;
+        background-color: transparent;
     }
 
     #home-btn{
@@ -145,6 +148,7 @@ main {
         position: relative;
         width: 100%;
         margin-left: 1rem;
+        background-color: transparent;
 
         grid-area: left;
 

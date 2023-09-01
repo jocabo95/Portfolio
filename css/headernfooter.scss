@@ -7,6 +7,10 @@ $background-text: #FFFFFF;
 $toggle-change: 576px;
 $navbar-height: 60px;
 
+*{
+    background-color: $background1;
+}
+
 body{
     padding-top: $navbar-height;
 }
@@ -37,7 +41,7 @@ nav{
         i{
             width: 3vw;
             height: auto;
-            color: $text-regular;
+            color: $background-text;
         }
 
     }
@@ -54,7 +58,7 @@ nav{
         /*select only ul tag with class me-2*/
         ul.me-2{
             margin-right: 0 !important;
-            color: $text-regular;
+            color: $background-text;
         }
     }
 
@@ -86,7 +90,7 @@ nav{
             .nav-link{
                 height: auto;
                 font-size: 1rem;
-                color: $text-regular;
+                color: $background-text;
             }
         }
 
@@ -116,7 +120,7 @@ nav{
                 text-align: center;
             }
             .nav-item:hover {
-                border-bottom: solid thin $background;
+                border-bottom: solid thin $background1;
                 transition: all 0s;
             }
         
@@ -163,7 +167,6 @@ footer {
     padding: 0rem 2rem 0rem 2rem;
     color: $background-text;
     background-color: $background1;
-    opacity: 0.99;
 
     /*query for text size small vp*/
     @media (max-width: $toggle-change){
@@ -211,7 +214,7 @@ footer {
         border: none;
         margin: 2rem 4rem 4rem 4rem;
         
-        background-color: $text-regular;
+        background-color: $background-text;
         color: $background1;
         opacity: 0.8;
 
@@ -224,7 +227,7 @@ footer {
 
     #footer-button:hover{
         translate: 0px -2px 0px;
-        background-color: $text-regular;
+        background-color: $background-text;
         opacity: 1;
         transition: all 0.3s;
     }
@@ -247,12 +250,11 @@ footer {
         display: flex;
         justify-content: flex-start;
 
-        opacity: 0.9;
         border-top: solid thin $background-text;
     }
 
     #copyright > p {
-        font-size: 0.5rem;
+        font-size: 0.7rem;
     }
 }
 
