@@ -1,13 +1,7 @@
-$background1: rgb(34, 34, 34);
+$background1: rgb(45,45,45);
 $background-light: #E74753;
 $details: #ef402f;
 $background-text: #FFFFFF;
-
-// $background: #F22929;
-// $background-light: #E74753;
-// $details: #F22929;
-// $text-regular: #333333;
-// $background-text: #FFFFFF;
 
 /*navbar-expand-{-sm|-md|-lg|-xl}*/
 $toggle-change: 576px;
@@ -98,6 +92,7 @@ main {
         right: auto;
         max-width: 50%;
         color: white;
+        background-color: transparent;
     }
 
     #main-title {
@@ -348,11 +343,15 @@ main {
             justify-content: flex-start;
             gap: 0.5rem;
 
-            // box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 1), inset 10px 10px 15px rgba(220, 220, 220);
             color: $background-text;
             border-radius: 20px;
             background-color: $background-light;
             opacity: 0.8;
+
+            i{
+                background-color: $background-light;
+            }
+            
         }
 
         h3 {

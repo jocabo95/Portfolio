@@ -1,5 +1,5 @@
-$background1: rgb(34, 34, 34);
-$background1-light: rgb(48, 48, 48);
+$background1: rgb(48, 48, 48);
+$background1-light: rgb(62,62,62);
 $background-light: #E74753;
 $details: #ef402f;
 $background-text: #FFFFFF;
@@ -44,6 +44,7 @@ main {
         color: $background-text;
         border-bottom: solid thin $background-light;
         padding-bottom: 0.5rem;
+        background-color: transparent;
     }
 
     #info-container{

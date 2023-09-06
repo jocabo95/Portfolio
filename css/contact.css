@@ -11,12 +11,12 @@
 main {
   width: 100%;
   height: auto;
-  background-color: rgb(34, 34, 34);
+  background-color: rgb(45, 45, 45);
 }
 
 #contact {
   height: 100vh;
-  background-color: rgb(34, 34, 34);
+  background-color: rgb(45, 45, 45);
   padding-top: 3rem;
   display: flex;
   flex-direction: column;
@@ -48,16 +48,16 @@ main {
   gap: min(10vw, 3rem);
   border-radius: 20px;
   transition: all 1s;
-  background-color: rgb(48, 48, 48);
+  background-color: rgb(62, 62, 62);
 }
 #contact a {
-  background-color: rgb(48, 48, 48);
+  background-color: rgb(62, 62, 62);
 }
 #contact a i {
   color: #FFFFFF;
   font-size: 2rem;
   transition: all 0.3s;
-  background-color: rgb(48, 48, 48);
+  background-color: rgb(62, 62, 62);
 }
 #contact a:hover {
   border-bottom: solid thin #E74753;

@@ -11,13 +11,13 @@
 main {
   width: 100%;
   height: auto;
-  background-color: rgb(34, 34, 34);
+  background-color: rgb(45, 45, 45);
 }
 
 #projects {
   height: auto;
   min-height: 100vh;
-  background-color: rgb(34, 34, 34);
+  background-color: rgb(45, 45, 45);
   padding-top: 3rem;
   padding-bottom: 4rem;
   display: flex;
@@ -72,7 +72,7 @@ main {
   /*card style*/
   padding-bottom: 0;
   border-radius: 20px;
-  background-color: rgb(48, 48, 48);
+  background-color: rgb(62, 62, 62);
   color: #FFFFFF;
 }
 #projects #library-container .img-container {

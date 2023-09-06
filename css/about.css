@@ -17,7 +17,7 @@ main {
 #about {
   height: auto;
   min-height: 100vh;
-  background-color: rgb(34, 34, 34);
+  background-color: rgb(48, 48, 48);
   padding-top: 3rem;
   padding-bottom: 4rem;
   display: flex;
@@ -33,15 +33,16 @@ main {
   color: #FFFFFF;
   border-bottom: solid thin #E74753;
   padding-bottom: 0.5rem;
+  background-color: transparent;
 }
 #about #info-container {
   width: 80%;
-  background-color: rgb(34, 34, 34);
+  background-color: rgb(48, 48, 48);
 }
 #about p {
   padding: 1.5rem;
   border-radius: 20px;
   font-weight: bold;
   color: #FFFFFF;
-  background-color: rgb(48, 48, 48);
+  background-color: rgb(62, 62, 62);
 }/*# sourceMappingURL=about.css.map */
